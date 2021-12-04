@@ -8,7 +8,7 @@ import Typed from "react-typed";
 const Header = () => {
   const textVariants = {
     visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 10 },
+    hidden: { opacity: 0, y: 40 },
   };
 
   return (
@@ -29,7 +29,7 @@ const Header = () => {
             initial="hidden"
             animate="visible"
             variants={textVariants}
-            transition={{ delay: 0.9, duration: 0.4 }}
+            transition={{ delay: 0.9, duration: 0.3 }}
           >
             <li>blog</li>
             <li>PROJECTS</li>
@@ -37,7 +37,13 @@ const Header = () => {
           </motion.ul>
         </Navbar>
         <HeaderText>
-          <h1 title="lishu gupta">
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+            transition={{ delay: 1, duration: 0.5 }}
+            title="lishu gupta"
+          >
             <Typed
               strings={["Web", "Mongoose", "Express", "React", "NodeJS"]}
               backSpeed={50}
@@ -55,10 +61,17 @@ const Header = () => {
               loop
             />
             Developer
-          </h1>
+          </motion.h1>
         </HeaderText>
         <div class="headerSidebar"></div>
-        <img src={patternImg} className="pi" />
+        <motion.img
+          initial="hidden"
+          animate="visible"
+          variants={textVariants}
+          transition={{ delay: 1.1, duration: 0.5 }}
+          src={patternImg}
+          className="pi"
+        />
       </StyledHeader>
     </div>
   );
