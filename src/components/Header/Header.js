@@ -1,6 +1,9 @@
 import React from "react";
 import { StyledHeader, Navbar, HeaderText } from "./Header.styled";
 import patternImg from "../../images/pattern.svg";
+
+import Typed from "react-typed";
+
 const Header = () => {
   return (
     <div>
@@ -14,7 +17,23 @@ const Header = () => {
           </ul>
         </Navbar>
         <HeaderText>
-          <h1 title="lishu gupta">Web and Android Developer</h1>
+          <h1 title="lishu gupta">
+            <Typed
+              strings={["Web", "Mongoose", "Express", "React", "NodeJS"]}
+              backSpeed={50}
+              typeSpeed={200}
+              loop
+            />
+            and
+            <br />
+            <Typed
+              strings={["Android", "Flutter", "ReactNative"]}
+              backSpeed={50}
+              typeSpeed={200}
+              loop
+            />
+            Developer
+          </h1>
         </HeaderText>
         <div class="headerSidebar"></div>
         <img src={patternImg} className="pi" />
