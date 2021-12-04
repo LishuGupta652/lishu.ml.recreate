@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledHeader, Navbar, HeaderText } from "./Header.styled";
+import { StyledHeader, StyledNavbar, HeaderText } from "./Header.styled";
 import patternImg from "../../images/pattern.svg";
 import { motion } from "framer-motion";
 
@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <div>
       <StyledHeader>
-        <Navbar>
+        <StyledNavbar>
           <motion.h2
             title="lishu.ml"
             initial="hidden"
@@ -35,7 +35,7 @@ const Header = () => {
             <li>PROJECTS</li>
             <li>log in</li>
           </motion.ul>
-        </Navbar>
+        </StyledNavbar>
         <HeaderText>
           <motion.h1
             initial="hidden"

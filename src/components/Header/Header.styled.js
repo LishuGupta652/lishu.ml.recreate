@@ -6,7 +6,6 @@ export const StyledHeader = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 80px 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
-  height: 100vh;
   grid-auto-flow: row;
   grid-template-areas:
     "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar"
@@ -19,14 +18,14 @@ export const StyledHeader = styled.div`
   .pi {
     position: absolute;
     width: 300px;
-    top: 200px;
+    top: 120px;
     left: 50px;
     z-index: 0;
     pointer-events: none;
   }
 `;
 
-export const Navbar = styled.nav`
+export const StyledNavbar = styled.nav`
   grid-area: navbar;
   background-color: ${(props) => props.theme.header.nav.background};
   color: ${(props) => props.theme.header.nav.color};
