@@ -15,3 +15,21 @@ export const StyledHeader = styled.div`
     "headerSidebar . . . . . . . . . . ."
     "headerSidebar . . . . . . . . . . .";
 `;
+
+export const Navbar = styled.nav`
+  grid-area: navbar;
+  background-color: ${(props) => props.theme.header.nav.background};
+  color: ${(props) => props.theme.header.nav.color};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 0 20px;
+
+  h2 {
+    color: red;
+  }
+  @media (max-width: 720px) {
+    background-color: green;
+  }
+`;
