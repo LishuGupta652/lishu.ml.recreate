@@ -30,6 +30,7 @@ const darkTheme = {
   colors: {
     color: "#fafafa",
     background: "#121212",
+    green: "#2ecc71",
   },
   mobile: "786px",
 };

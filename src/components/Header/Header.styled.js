@@ -27,9 +27,13 @@ export const Navbar = styled.nav`
   padding: 0 20px;
 
   h2 {
-    color: red;
+    transition: 0.2s ease-in-out;
+    color: ${(props) => props.theme.colors.green};
   }
-  @media (max-width: 720px) {
+  & h2:hover {
+    color: ${(props) => props.theme.colors.green};
+  }
+  @media (max-width: 786px) {
     background-color: green;
   }
 `;
