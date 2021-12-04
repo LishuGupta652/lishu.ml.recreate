@@ -1,6 +1,6 @@
 import React from "react";
-import { StyledHeader, Navbar } from "./Header.styled";
-
+import { StyledHeader, Navbar, HeaderText } from "./Header.styled";
+import patternImg from "../../images/pattern.svg";
 const Header = () => {
   return (
     <div>
@@ -12,8 +12,11 @@ const Header = () => {
             <li>log in</li>
           </ul>
         </Navbar>
-        <div class="headerText"></div>
+        <HeaderText>
+          <h1 title="lishu gupta">Web and Android Developer</h1>
+        </HeaderText>
         <div class="headerSidebar"></div>
+        <img src={patternImg} className="pi" />
       </StyledHeader>
     </div>
   );

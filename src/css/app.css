@@ -71,9 +71,10 @@ ul {
 }
 
 .headerText {
-  grid-area: headerText;
 }
 
 .headerSidebar {
   grid-area: headerSidebar;
+}
+.pattern {
 }
