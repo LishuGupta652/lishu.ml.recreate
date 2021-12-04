@@ -6,16 +6,35 @@ import { motion } from "framer-motion";
 import Typed from "react-typed";
 
 const Header = () => {
+  const textVariants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 10 },
+  };
+
   return (
     <div>
       <StyledHeader>
         <Navbar>
-          <h2 title="lishu.ml">lishu gupta</h2>
-          <ul>
+          <motion.h2
+            title="lishu.ml"
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+            transition={{ delay: 0.8, duration: 0.3 }}
+          >
+            lishu gupta
+          </motion.h2>
+          {/* opacity 0 in css */}
+          <motion.ul
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+            transition={{ delay: 0.9, duration: 0.4 }}
+          >
             <li>blog</li>
             <li>PROJECTS</li>
             <li>log in</li>
-          </ul>
+          </motion.ul>
         </Navbar>
         <HeaderText>
           <h1 title="lishu gupta">

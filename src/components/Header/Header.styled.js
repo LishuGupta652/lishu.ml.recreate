@@ -23,8 +23,6 @@ export const StyledHeader = styled.div`
     left: 50px;
     z-index: 0;
     pointer-events: none;
-    color: red;
-    fill: red;
   }
 `;
 
@@ -51,6 +49,7 @@ export const Navbar = styled.nav`
     display: flex;
     align-items: center;
     transition: 0.2s ease-in-out;
+    opacity: 0;
   }
   ul li {
     margin-right: 20px;
