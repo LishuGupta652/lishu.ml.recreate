@@ -19,6 +19,7 @@ const lightTheme = {
   },
   mobile: "786px",
 };
+
 const darkTheme = {
   header: {
     nav: {
@@ -40,7 +41,7 @@ const StyledApp = styled.div`
 function App() {
   return (
     <>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={lightTheme}>
         <StyledApp>
           <div className="app">
             <BrowserRouter>
