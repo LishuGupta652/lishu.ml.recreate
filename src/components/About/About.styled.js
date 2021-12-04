@@ -6,13 +6,17 @@ export const StyledAbout = styled.div`
 
   h1 {
     font-size: clamp(2rem, 3.5vw, 3rem);
+    margin: 30px 0;
   }
 
   .card {
     width: 100%;
-    height: 200px;
     border-radius: 5px;
-    background-color: #2ecc7060;
+    background-color: #2ecc7010;
+    padding: 20px;
+  }
+  .head {
+    padding: 10px 0;
   }
 
   .skills {
