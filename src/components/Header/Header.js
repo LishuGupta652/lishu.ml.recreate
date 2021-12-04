@@ -6,9 +6,10 @@ const Header = () => {
     <div>
       <StyledHeader>
         <Navbar>
-          <h2>lishu gupta</h2>
+          <h2 title="lishu.ml">lishu gupta</h2>
           <ul>
             <li>blog</li>
+            <li>PROJECTS</li>
             <li>log in</li>
           </ul>
         </Navbar>

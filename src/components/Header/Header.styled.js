@@ -23,6 +23,8 @@ export const StyledHeader = styled.div`
     left: 50px;
     z-index: 0;
     pointer-events: none;
+    color: red;
+    fill: red;
   }
 `;
 
