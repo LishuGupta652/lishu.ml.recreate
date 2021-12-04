@@ -17,10 +17,10 @@ const postSchema = mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  creator: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
-  },
+  // creator: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: "User",
+  // },
 });
 
 module.exports = mongoose.model("apiPost", postSchema);
