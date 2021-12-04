@@ -1,6 +1,7 @@
 import React from "react";
 import { StyledHeader, Navbar, HeaderText } from "./Header.styled";
 import patternImg from "../../images/pattern.svg";
+import { motion } from "framer-motion/dist/es/index";
 
 import Typed from "react-typed";
 
@@ -22,6 +23,7 @@ const Header = () => {
               strings={["Web", "Mongoose", "Express", "React", "NodeJS"]}
               backSpeed={50}
               typeSpeed={200}
+              startDelay={1000}
               loop
             />
             and
@@ -30,6 +32,7 @@ const Header = () => {
               strings={["Android", "Flutter", "ReactNative"]}
               backSpeed={50}
               typeSpeed={200}
+              startDelay={1000}
               loop
             />
             Developer
