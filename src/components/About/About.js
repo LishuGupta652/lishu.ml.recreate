@@ -11,15 +11,6 @@ const About = () => {
 
   return (
     <StyledAbout>
-      <motion.h3
-        initial="hidden"
-        animate="visible"
-        variants={textVariants}
-        transition={{ delay: 0.8, duration: 0.3 }}
-      >
-        A young and passionate developer engineer. Working with Javascript
-        (NodeJS, ReactJS, React Native), Dart (Flutter), Python (ML).
-      </motion.h3>
       <h1>SKILLS</h1>
       <div class="skills">
         <div class="card one">
@@ -58,7 +49,7 @@ const About = () => {
           <div className="head">
             <h2>Android (Flutter, ReactNative)</h2>
             <p>
-              Being React Developer i am quite comfortable with React Native and
+              Being React Developer I am quite comfortable with React Native and
               had made applications on flutter
             </p>
           </div>

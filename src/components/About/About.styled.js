@@ -7,7 +7,7 @@ export const StyledAbout = styled.div`
 
   h3 {
     padding: 30px 100px;
-    margin: 10px 100px;
+    margin: 50px 100px;
     background-color: ${(props) => props.theme.colors.greenTrans};
   }
   h1 {
