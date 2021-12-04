@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import styled, { ThemeProvider } from "styled-components";
 // BrowserRouter
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// Framer Motion
+import { motion } from "framer-motion";
 
 const lightTheme = {
   header: {
@@ -44,6 +46,11 @@ function App() {
   return (
     <>
       <ThemeProvider theme={lightTheme}>
+        <motion.div
+          animate={{ x: "-150%" }}
+          transition={{ delay: 0.3, duration: 1 }}
+          className="animated-overlay"
+        />
         <StyledApp>
           <div className="app">
             <BrowserRouter>
