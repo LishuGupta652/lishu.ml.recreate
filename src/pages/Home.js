@@ -1,16 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
-
-const StyledHome = styled.div`
-  background-color: ${(props) => props.theme.light.background};
-`;
+import Header from "../components/Header/Header";
 
 const Home = () => {
   return (
-    <StyledHome>
+    <div>
       <Header />
-    </StyledHome>
+    </div>
   );
 };
 

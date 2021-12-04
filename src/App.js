@@ -6,20 +6,12 @@ import { ThemeProvider } from "styled-components";
 // BrowserRouter
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const theme = {
+const lightTheme = {
   header: {
     nav: {
       background: "#fafafa",
       color: "#121212",
     },
-  },
-  light: {
-    color: "#121212",
-    background: "#fafafa",
-  },
-  dark: {
-    color: "#fafafa",
-    background: "#121212",
   },
 };
 
@@ -27,7 +19,7 @@ function App() {
   return (
     <>
       <div className="app">
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={lightTheme}>
           <BrowserRouter>
             <Routes>
               <Route path="/" exact element={<Home />} />
