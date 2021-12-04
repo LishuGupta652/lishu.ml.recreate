@@ -1,20 +1,27 @@
 import React from "react";
 import { StyledAbout } from "./About.styled";
 
-// Animation on Scroll
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 const About = () => {
-  const { inView, entry, ref } = useInView();
+  const textVariants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 40 },
+  };
+
   return (
     <StyledAbout>
-      <h3>
+      <motion.h3
+        initial="hidden"
+        animate="visible"
+        variants={textVariants}
+        transition={{ delay: 0.8, duration: 0.3 }}
+      >
         A young and passionate developer engineer. Working with Javascript
         (NodeJS, ReactJS, React Native), Dart (Flutter), Python (ML).
-      </h3>
+      </motion.h3>
       <h1>SKILLS</h1>
-      <div class="skills" ref={ref}>
+      <div class="skills">
         <div class="card one">
           <div className="head">
             <h2>React JS</h2>

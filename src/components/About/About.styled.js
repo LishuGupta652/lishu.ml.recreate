@@ -39,6 +39,24 @@ export const StyledAbout = styled.div`
     align-items: center;
   }
 
+  @media (max-width: 720px) {
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 20px 14px;
+      grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six";
+      justify-items: center;
+      align-items: center;
+    }
+  }
+
   .one {
     grid-area: one;
   }
