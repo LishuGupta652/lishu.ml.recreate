@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import { StyledHeader } from "./Header.styled";
 
 const Navbar = styled.nav`
@@ -12,6 +11,10 @@ const Navbar = styled.nav`
   align-items: center;
   text-transform: uppercase;
   padding: 0 20px;
+
+  // @media (max-width: ${({ theme }) => theme.mobile} {
+  // background-color: green;
+  // }
 `;
 
 const Header = () => {

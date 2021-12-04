@@ -13,6 +13,7 @@ const lightTheme = {
       color: "#121212",
     },
   },
+  mobile: "786px",
 };
 
 function App() {
