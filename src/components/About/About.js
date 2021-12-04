@@ -68,10 +68,13 @@ const About = () => {
         </div>
         <div class="card five">
           <div className="head">
-            <h2>Typescript</h2>
+            <h2>API Design</h2>
           </div>
           <div className="body">
-            <p>Worked on typescript for type checking and code scaling</p>
+            <p>
+              Created many api with mongoose db as backend and express related
+              to Blog post and User Auth.
+            </p>
           </div>
         </div>
         <div class="card six">
