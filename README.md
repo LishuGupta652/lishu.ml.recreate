@@ -32,3 +32,4 @@ https://github.com/LishuGupta652/lishu.ml.recreate
 - [] header
 - [] backend
 - [] blog
+- [] styled components

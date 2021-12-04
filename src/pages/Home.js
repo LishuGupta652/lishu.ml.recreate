@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "../components/Header";
 
 const StyledHome = styled.div`
-  background-color: green;
+  background-color: ${(props) => props.theme.light.background};
 `;
 
 const Home = () => {

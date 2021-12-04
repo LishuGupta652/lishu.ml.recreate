@@ -7,6 +7,12 @@ import { ThemeProvider } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const theme = {
+  header: {
+    nav: {
+      background: "#fafafa",
+      color: "#121212",
+    },
+  },
   light: {
     color: "#121212",
     background: "#fafafa",
@@ -20,13 +26,15 @@ const theme = {
 function App() {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-          </Routes>
-        </BrowserRouter>
-      </ThemeProvider>
+      <div className="app">
+        <ThemeProvider theme={theme}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" exact element={<Home />} />
+            </Routes>
+          </BrowserRouter>
+        </ThemeProvider>
+      </div>
     </>
   );
 }
