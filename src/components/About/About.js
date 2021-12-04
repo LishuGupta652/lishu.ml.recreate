@@ -45,8 +45,11 @@ const About = () => {
         </div>
         <div class="card four">
           <div className="head">
-            <h2>Javascript</h2>
-            <p>Strong hold on Javascript and library to work with.</p>
+            <h2>Android (Flutter, ReactNative)</h2>
+            <p>
+              Being React Developer i am quite comfortable with React Native and
+              had made applications on flutter
+            </p>
           </div>
           <div className="body">
             <p></p>
@@ -57,12 +60,7 @@ const About = () => {
             <h2>Typescript</h2>
           </div>
           <div className="body">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              nulla sed unde nemo eaque iste ipsa, laborum ex. Delectus nihil
-              dolore eligendi adipisci quod optio quo nam vero soluta
-              perferendis?
-            </p>
+            <p>Worked on typescript for type checking and code scaling</p>
           </div>
         </div>
         <div class="card six">
