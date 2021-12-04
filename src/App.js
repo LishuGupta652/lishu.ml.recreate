@@ -7,6 +7,9 @@ import styled, { ThemeProvider } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Framer Motion
 import { motion } from "framer-motion";
+// Context api
+import { Theme } from "./contextapi/ThemeContext";
+import { useContext } from "react";
 
 const lightTheme = {
   header: {
@@ -43,9 +46,11 @@ const StyledApp = styled.div`
 `;
 
 function App() {
+  const [theme, setTheme] = useContext(Theme);
+
   return (
     <>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <motion.div
           animate={{ x: "-150%" }}
           transition={{ delay: 0.3, duration: 1 }}

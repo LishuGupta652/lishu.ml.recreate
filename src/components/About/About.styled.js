@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledAbout = styled.div`
   width: 95%;
   margin: 100px auto;
+  color: ${(props) => props.theme.colors.color};
 
   h1 {
     font-size: clamp(2rem, 3.5vw, 3rem);
@@ -12,7 +13,7 @@ export const StyledAbout = styled.div`
   .card {
     width: 100%;
     border-radius: 5px;
-    background-color: #2ecc7010;
+    background-color: rgba(46, 204, 112, 0.1);
     padding: 20px;
   }
   .head {

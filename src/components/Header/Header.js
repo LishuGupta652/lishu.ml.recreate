@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StyledHeader, StyledNavbar, HeaderText } from "./Header.styled";
 import patternImg from "../../images/pattern.svg";
 import { motion } from "framer-motion";
 
 import Typed from "react-typed";
 
+import { Theme } from "../../contextapi/ThemeContext";
+
 const Header = () => {
+  const [theme, setTheme] = useContext(Theme);
   const textVariants = {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 40 },
@@ -21,6 +24,11 @@ const Header = () => {
             animate="visible"
             variants={textVariants}
             transition={{ delay: 0.8, duration: 0.3 }}
+            onClick={() =>
+              setTheme((theme) => {
+                return theme === "dark" ? "light" : "dark";
+              })
+            }
           >
             lishu gupta
           </motion.h2>
