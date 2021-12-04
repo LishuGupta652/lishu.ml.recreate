@@ -28,12 +28,26 @@ export const Navbar = styled.nav`
 
   h2 {
     transition: 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  h2:hover {
     color: ${(props) => props.theme.colors.green};
   }
-  & h2:hover {
+
+  ul {
+    display: flex;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+  }
+  ul li {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+  }
+  ul li:hover {
     color: ${(props) => props.theme.colors.green};
   }
   @media (max-width: 786px) {
-    background-color: green;
   }
 `;

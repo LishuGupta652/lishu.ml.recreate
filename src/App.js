@@ -16,6 +16,7 @@ const lightTheme = {
   colors: {
     background: "#fafafa",
     color: "#121212",
+    green: "#2ecc71",
   },
   mobile: "786px",
 };
@@ -48,6 +49,7 @@ function App() {
             <BrowserRouter>
               <Routes>
                 <Route path="/" exact element={<Home />} />
+                <Route path="/home" exact element={<Home />} />
               </Routes>
             </BrowserRouter>
           </div>
