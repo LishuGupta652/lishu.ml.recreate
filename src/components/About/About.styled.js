@@ -5,6 +5,11 @@ export const StyledAbout = styled.div`
   margin: 100px auto;
   color: ${(props) => props.theme.colors.color};
 
+  h3 {
+    padding: 30px 100px;
+    margin: 10px 100px;
+    background-color: ${(props) => props.theme.colors.greenTrans};
+  }
   h1 {
     font-size: clamp(2rem, 3.5vw, 3rem);
     margin: 30px 0;
@@ -13,7 +18,7 @@ export const StyledAbout = styled.div`
   .card {
     width: 100%;
     border-radius: 5px;
-    background-color: rgba(46, 204, 112, 0.1);
+    background-color: ${(props) => props.theme.colors.greenTrans};
     padding: 20px;
   }
   .head {

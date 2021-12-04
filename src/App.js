@@ -22,6 +22,7 @@ const lightTheme = {
     background: "#fafafa",
     color: "#121212",
     green: "#2ecc71",
+    greenTrans: "rgba(46, 204, 112, 0.1)",
   },
   mobile: "786px",
 };
@@ -37,6 +38,7 @@ const darkTheme = {
     color: "#fafafa",
     background: "#121212",
     green: "#2ecc71",
+    greenTrans: "rgba(46, 204, 112, 0.1)",
   },
   mobile: "786px",
 };

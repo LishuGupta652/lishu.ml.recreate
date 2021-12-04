@@ -9,6 +9,10 @@ const About = () => {
   const { inView, entry, ref } = useInView();
   return (
     <StyledAbout>
+      <h3>
+        A young and passionate developer engineer. Working with Javascript
+        (NodeJS, ReactJS, React Native), Dart (Flutter), Python (ML).
+      </h3>
       <h1>SKILLS</h1>
       <div class="skills" ref={ref}>
         <div class="card one">
