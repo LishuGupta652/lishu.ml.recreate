@@ -3,6 +3,8 @@ import "./css/app.css";
 // components
 import Home from "./pages/Home";
 import { ThemeProvider } from "styled-components";
+// BrowserRouter
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const theme = {
   light: {
@@ -19,7 +21,11 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Home />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+          </Routes>
+        </BrowserRouter>
       </ThemeProvider>
     </>
   );
