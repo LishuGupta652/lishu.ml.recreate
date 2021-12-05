@@ -88,13 +88,11 @@ export const StyledNavbar = styled.nav`
   ul li {
     margin-right: 20px;
     font-weight: bold;
-    font-size: clamp(0.5rem, 0.8vw, 2rem);
+    font-size: clamp(0.8rem, 1vw, 2rem);
     transition: 0.2s ease-in-out;
   }
   ul li:hover {
     color: ${(props) => props.theme.colors.green};
-  }
-  @media (max-width: 786px) {
   }
 `;
 
