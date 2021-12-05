@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 // Context api
 import { Theme } from "./contextapi/ThemeContext";
 import { useContext } from "react";
+import { NotFound } from "http-errors";
 
 const lightTheme = {
   header: {
@@ -58,7 +59,7 @@ function App() {
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <motion.div
           animate={{ x: "-150%" }}
-          transition={{ delay: 0.3, duration: 1 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
           className="animated-overlay"
         />
         <StyledApp>
@@ -68,6 +69,7 @@ function App() {
                 <Route path="/" exact element={<Home />} />
                 <Route path="/home" exact element={<Home />} />
                 <Route path="/project" exact element={<Project />} />
+                <Route path="*" exact element={<NotFound />} />
               </Routes>
             </BrowserRouter>
           </div>
