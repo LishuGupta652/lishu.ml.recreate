@@ -141,6 +141,11 @@ const Work = () => {
         img={detect}
         desc={"Complete Responsive Design made with ReactJS, Firebase"}
       />
+      <SingleWork
+        title={"Azael India"}
+        img={azael}
+        desc={"Complete Responsive Design made with ReactJS, Firebase"}
+      />
       <SingleWorkVideo
         title={"automated Gaming"}
         video={trex}
