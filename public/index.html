@@ -2,21 +2,106 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/lishu.png" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/lishu.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="skyblue" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="A young and passionate developer. Working with Javascript (NodeJS, Express, ReactJS, React Native), Dart (Flutter), Python (ML)."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/lishu.jpg" />
-
+    <link rel="apple-touch-icon" href="lishu.jpg" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Primary Meta Tags -->
+    <title>Lishu gupta | Portfolio</title>
+    <meta name="title" content="Lishu gupta | Portfolio" />
+    <meta
+      name="description"
+      content="A young and passionate developer. Working with Javascript (NodeJS, Express, ReactJS, React Native), Dart (Flutter), Python (ML)."
+    />
 
-    <title>portfolio</title>
+    <meta
+      name="keywords"
+      content="React JS, Firebase, Lishu gupta, lishu, HTML, CSS, JavaScript"
+    />
+    <meta name="author" content="Lishu Gupta" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.lishu.ml/" />
+    <meta property="og:title" content="Lishu gupta | Portfolio" />
+    <meta
+      property="og:description"
+      content="A young and passionate developer. Working with Javascript (NodeJS, Express, ReactJS, React Native), Dart (Flutter), Python (ML)."
+    />
+    <meta property="og:image" content="/lishu.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.lishu.ml/" />
+    <meta property="twitter:title" content="Lishu gupta | Portfolio" />
+    <meta
+      property="twitter:description"
+      content="A young and passionate developer. Working with Javascript (NodeJS, Express, ReactJS, React Native), Dart (Flutter), Python (ML)."
+    />
+    <meta property="twitter:image" content="/lishu.jpg" />
+
+    <title>Lishu gupta | Portfolio</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .loading-suspense {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        background-color: #212121;
+        color: #fff;
+        font-size: 2rem;
+        place-items: center;
+        z-index: 10;
+      }
+    </style>
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loading-suspense">Loading ...</div>
+    </div>
+    <script defer type="text/javascript">
+      var $zoho = $zoho || {};
+      $zoho.salesiq = $zoho.salesiq || {
+        widgetcode:
+          "2f92f6eb9618197935112e11f9af1bf6d9199b1079274c21b00f609ee05c6ddcd33976e473cc98a862a1ea8d8b19cb29",
+        values: {},
+        ready: function () {},
+      };
+      var d = document;
+      s = d.createElement("script");
+      s.type = "text/javascript";
+      s.id = "zsiqscript";
+      s.defer = true;
+      s.src = "https://salesiq.zoho.in/widget";
+      t = d.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(s, t);
+      d.write("<div id='zsiqwidget'></div>");
+    </script>
+
+    <script defer src="calm.js"></script>
+    <script defer>
+      document.onkeypress = function (e) {
+        e = e || window.event;
+
+        if (e.keyCode === 13) {
+          document.documentElement.classList.toggle("dark-mode");
+        }
+        if (e.keyCode === 65) {
+          document.documentElement.classList.toggle("a");
+        }
+      };
+    </script>
   </body>
 </html>

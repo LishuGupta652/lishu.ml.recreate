@@ -122,7 +122,7 @@ const Header = () => {
             transition={{ delay: 0.5, duration: 0.5 }}
             className="social"
           >
-            <a href="https://github.com/lishugupta652">
+            <a href="https://github.com/lishugupta652" target="blank">
               <div className="github icon-container">
                 <svg className="icon" viewBox="0 0 24 24">
                   <path
@@ -133,7 +133,7 @@ const Header = () => {
               </div>
             </a>
 
-            <a href="https://www.linkedin.com/in/lishugupta652/">
+            <a href="https://www.linkedin.com/in/lishugupta652/" target="blank">
               <div className="linkedin icon-container">
                 <svg className="icon" viewBox="0 0 24 24">
                   <path
@@ -144,7 +144,7 @@ const Header = () => {
               </div>
             </a>
 
-            <a href="https://twitter.com/lishugupta652">
+            <a href="https://twitter.com/lishugupta652" target="blank">
               <div className="twitter icon-container">
                 <svg className="icon" viewBox="0 0 24 24">
                   <path

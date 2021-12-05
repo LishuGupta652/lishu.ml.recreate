@@ -1,25 +1,28 @@
 {
-  "short_name": "Lishu gupta",
-  "name": "Learning App by lishu gupta",
+  "short_name": "Lishu Gupta",
+  "name": "PortFolio",
   "icons": [
     {
       "src": "lishu.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose": "any maskable"
     },
     {
-      "src": "lishu.png",
+      "src": "lishu.jpg",
+      "sizes": "196x196",
       "type": "image/png",
-      "sizes": "192x192"
+      "purpose": "any maskable"
     },
     {
-      "src": "lishu.png",
+      "src": "lishu.jpg",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#2ecc71",
+  "background_color": "#fafafa"
 }
