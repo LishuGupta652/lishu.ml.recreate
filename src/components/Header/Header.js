@@ -83,7 +83,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <Link to="/login">login</Link>
+              <a href="https://auth.lishu.ml/login">login</a>
             </li>
           </motion.ul>
         </StyledNavbar>
