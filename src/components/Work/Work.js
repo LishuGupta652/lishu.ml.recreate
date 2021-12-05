@@ -185,7 +185,7 @@ const SingleWorkVideo = ({ video, title, link, desc }) => {
       <div className="">
         <div class="flex-container">
           <div class="flex-items item01">
-            <video loop autoStart autoPlay src={video} type="video/mp4" />
+            <video autoStart autoPlay src={video} type="video/mp4" />
           </div>
           <div class="flex-items item02">
             <div className="card">
