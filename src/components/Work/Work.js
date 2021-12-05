@@ -1,12 +1,12 @@
 import React from "react";
-import { StyledWork } from "./Work.styled";
+import { FlexContainer, StyledWork } from "./Work.styled";
 
 import { motion } from "framer-motion";
 
 // images
 import dwarf from "../../images/project/dwarf.jpg";
 
-const Skills = () => {
+const Work = () => {
   const textVariants = {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 40 },
@@ -15,6 +15,14 @@ const Skills = () => {
   return (
     <StyledWork>
       <h2>projects</h2>
+      <SingleWork />
+    </StyledWork>
+  );
+};
+
+const SingleWork = () => {
+  return (
+    <FlexContainer>
       <div class="flex-container">
         <div class="flex-items item01">
           <img src={dwarf} alt="" />
@@ -30,8 +38,8 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </StyledWork>
+    </FlexContainer>
   );
 };
 
-export default Skills;
+export default Work;
