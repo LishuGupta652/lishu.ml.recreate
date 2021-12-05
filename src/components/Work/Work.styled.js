@@ -56,6 +56,23 @@ export const FlexContainer = styled.div`
   .item02 {
   }
 
+  @media (max-width: 820px) {
+    .flex-container {
+      flex-direction: row;
+    }
+
+    .flex-items:nth-child(1) {
+      width: 100%;
+    }
+    .item01 img {
+    }
+
+    .flex-items:nth-child(2) {
+      width: 100%;
+    }
+    .item02 {
+    }
+  }
   .card {
     margin: 10px 30px;
     padding: 20px;
