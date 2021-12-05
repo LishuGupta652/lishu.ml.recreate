@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 // images
 import dwarf from "../../images/project/dwarf.jpg";
 import scsit from "../../images/project/scsit.jpg";
+import whatsapp from "../../images/project/whatsapp.jpg";
+import instagram from "../../images/project/instagram.jpg";
 
 const Work = () => {
   const textVariants = {
@@ -20,22 +22,31 @@ const Work = () => {
         title={"dwarf.co.in"}
         link={"http://www.dwarf.co.in/"}
         img={dwarf}
+        desc={"Complete Responsive Design made with ReactJS, Firebase"}
       />
       <SingleWork
         title={"scs.dauniv.ac.in"}
         img={scsit}
         link={"http://www.scs.dauniv.ac.in/"}
+        desc={"Complete Responsive Design made with ReactJS, Firebase"}
       />
       <SingleWork
-        title={"dwarf.co.in"}
-        img={dwarf}
-        link={"http://www.scs.dauniv.ac.in/"}
+        title={"whatsapp"}
+        img={whatsapp}
+        link={"https://whatsappcosmos.web.app/"}
+        desc={"Complete Responsive Design made with ReactJS, Firebase"}
+      />
+      <SingleWork
+        title={"instagramclone"}
+        img={instagram}
+        link={"https://instagramclonecosmos.web.app/"}
+        desc={"Complete Responsive Design made with ReactJS, Firebase"}
       />
     </StyledWork>
   );
 };
 
-const SingleWork = ({ img, title, link }) => {
+const SingleWork = ({ img, title, link, desc }) => {
   return (
     <FlexContainer>
       <div class="flex-container">
@@ -49,9 +60,7 @@ const SingleWork = ({ img, title, link }) => {
                 <h1>{title}</h1>
               </a>
             </div>
-            <div className="body">
-              Complete Responsive Design made with ReactJS, Firebase
-            </div>
+            <div className="body">{desc}</div>
           </div>
         </div>
       </div>
