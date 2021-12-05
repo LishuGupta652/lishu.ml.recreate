@@ -16,12 +16,12 @@ export const StyledHeader = styled.div`
     ". . . . . . . . . . . .";
 
   a:link {
-    color: ${(props) => props.theme.header.nav.color};
+    color: ${(props) => props.theme.colors.color};
     background-color: transparent;
     text-decoration: none;
   }
   a:visited {
-    color: ${(props) => props.theme.header.nav.color};
+    color: ${(props) => props.theme.colors.color};
     background-color: transparent;
     text-decoration: none;
   }
@@ -31,7 +31,7 @@ export const StyledHeader = styled.div`
     text-decoration: none;
   }
   a:active {
-    color: ${(props) => props.theme.header.nav.color};
+    color: ${(props) => props.theme.colors.color};
     background-color: transparent;
     text-decoration: underline;
   }
@@ -120,5 +120,5 @@ export const StyledNavbar = styled.nav`
 export const HeaderText = styled.div`
   grid-area: headerText;
   font-size: clamp(1rem, 2.5vw, 2rem);
-  color: ${(props) => props.theme.header.nav.color};
+  color: ${(props) => props.theme.colors.blue};
 `;

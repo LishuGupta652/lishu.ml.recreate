@@ -4,8 +4,28 @@ export const StyledWork = styled.div`
   width: 95%;
   margin: 0 auto;
   padding-top: 100px;
+  color: ${(props) => props.theme.colors.blue};
 
-  color: ${(props) => props.theme.colors.color};
+  a:link {
+    color: ${(props) => props.theme.colors.blue};
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: ${(props) => props.theme.colors.blue};
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: ${(props) => props.theme.colors.green};
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:active {
+    color: ${(props) => props.theme.colors.blue};
+    background-color: transparent;
+    text-decoration: underline;
+  }
 
   h2 {
     letter-spacing: 10px;
