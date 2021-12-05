@@ -49,7 +49,7 @@ export const StyledHeader = styled.div`
       " . headerText headerText headerText headerText headerText headerText headerText headerText  . . ."
       " . headerText headerText headerText headerText headerText headerText headerText headerText  . . ."
       ". . . . . . . . . . . ."
-      " . . . . . . .  hs hs hs . .";
+      " . . . . .   hs hs hs . . . .";
   }
 
   .headerSidebar {
