@@ -35,7 +35,7 @@ const Header = () => {
             transition={{ delay: 0.5, duration: 0.3 }}
             onClick={() => setTheme()}
           >
-            lishu gupta
+            <Link to="/">lishu gupta</Link>
           </motion.h2>
           {/* opacity 0 in css */}
           <motion.div
@@ -84,7 +84,7 @@ const Header = () => {
               <Link to="/blog">blog</Link>
             </li>
             <li>
-              <a href="#projects" to="/#projects">
+              <a href="/#projects" to="/#projects">
                 projects
               </a>
             </li>

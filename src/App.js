@@ -71,10 +71,11 @@ function App() {
           <div className="app">
             <BrowserRouter>
               <Routes>
-                <Route path="*" element={<NotFound />} />
                 <Route path="/" exact element={<Home />} />
                 <Route path="/home" exact element={<Home />} />
                 <Route path="/project" exact element={<Project />} />
+                <Route path="/blog" exact element={<Project />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
           </div>
