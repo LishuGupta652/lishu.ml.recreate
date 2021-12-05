@@ -20,7 +20,7 @@ const lightTheme = {
   },
   colors: {
     background: "#fafafa",
-    color: "#121212",
+    color: "#212121",
     green: "#2ecc71",
     greenTrans: "rgba(46, 204, 112, 0.1)",
   },
@@ -31,12 +31,12 @@ const darkTheme = {
   header: {
     nav: {
       color: "#fafafa",
-      background: "#121212",
+      background: "#212121",
     },
   },
   colors: {
     color: "#fafafa",
-    background: "#121212",
+    background: "#212121",
     green: "#2ecc71",
     greenTrans: "rgba(46, 204, 112, 0.1)",
   },

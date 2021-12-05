@@ -1,9 +1,9 @@
 import React from "react";
-import { StyledAbout } from "./About.styled";
+import { StyledAbout } from "./Skills.styled";
 
 import { motion } from "framer-motion";
 
-const About = () => {
+const Skills = () => {
   const textVariants = {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 40 },
@@ -84,4 +84,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Skills;

@@ -20,6 +20,7 @@ export const StyledAbout = styled.div`
     border-radius: 5px;
     background-color: ${(props) => props.theme.colors.greenTrans};
     padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   .head {
     padding: 10px 0;
@@ -28,13 +29,14 @@ export const StyledAbout = styled.div`
   .skills {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1f;
     gap: 10px 10px;
     grid-auto-flow: row;
     grid-template-areas:
       "one . ."
       "two three ."
-      "four five six";
+      "four five six"
+      ". . .";
     justify-items: center;
     align-items: center;
   }

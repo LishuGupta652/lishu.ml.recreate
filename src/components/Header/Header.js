@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import { StyledHeader, StyledNavbar, HeaderText } from "./Header.styled";
-import patternImg from "../../images/pattern.svg";
 import { motion } from "framer-motion";
+// Images
+import patternImg from "../../images/pattern.svg";
+import switchImg from "../../images/switchImg.svg";
 
 import Typed from "react-typed";
 
@@ -24,11 +26,7 @@ const Header = () => {
             animate="visible"
             variants={textVariants}
             transition={{ delay: 0.8, duration: 0.3 }}
-            onClick={() =>
-              setTheme((theme) => {
-                return theme === "dark" ? "light" : "dark";
-              })
-            }
+            onClick={() => setTheme()}
           >
             lishu gupta
           </motion.h2>
@@ -39,6 +37,10 @@ const Header = () => {
             variants={textVariants}
             transition={{ delay: 0.9, duration: 0.3 }}
           >
+            <label class="switch">
+              <input type="checkbox" onClick={() => setTheme()} />
+              <span class="slider round"></span>
+            </label>
             <li>blog</li>
             <li>PROJECTS</li>
             <li>log in</li>
