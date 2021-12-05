@@ -84,7 +84,7 @@ const Header = () => {
           animate="visible"
           variants={textVariants}
           transition={{ delay: 1.1, duration: 0.5 }}
-          src={patternImg2}
+          src={patternImg}
           className="pi"
         />
         <motion.img
@@ -92,7 +92,7 @@ const Header = () => {
           animate="visible"
           variants={textVariants}
           transition={{ delay: 1.1, duration: 0.5 }}
-          src={patternImg2}
+          src={patternImg}
           className="pi2"
         />
       </StyledHeader>

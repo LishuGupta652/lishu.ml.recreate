@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const StyledAbout = styled.div`
   width: 95%;
-  margin: 100px auto;
+  margin: 0px auto;
   color: ${(props) => props.theme.colors.color};
 
   h3 {
-    padding: 30px 100px;
-    margin: 50px 100px;
+    padding: 30px 0;
+    margin: 50px 0;
     background-color: ${(props) => props.theme.colors.greenTrans};
   }
   h1 {
