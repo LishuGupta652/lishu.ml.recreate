@@ -3,6 +3,8 @@ import { StyledHeader, StyledNavbar, HeaderText } from "./Header.styled";
 import { motion } from "framer-motion";
 // Images
 import patternImg from "../../images/pattern.svg";
+import patternImg2 from "../../images/pattern_2.svg";
+import banner from "../../images/banner.svg";
 import switchImg from "../../images/switchImg.svg";
 
 import Typed from "react-typed";
@@ -15,6 +17,7 @@ const Header = () => {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 40 },
   };
+  const userPref = sessionStorage.getItem("theme");
 
   return (
     <div>
@@ -38,7 +41,11 @@ const Header = () => {
             transition={{ delay: 0.9, duration: 0.3 }}
           >
             <label class="switch">
-              <input type="checkbox" onClick={() => setTheme()} />
+              <input
+                type="checkbox"
+                onClick={() => setTheme()}
+                {...(userPref === "light" ? "" : "checked")}
+              />
               <span class="slider round"></span>
             </label>
             <li>blog</li>
@@ -81,6 +88,14 @@ const Header = () => {
           transition={{ delay: 1.1, duration: 0.5 }}
           src={patternImg}
           className="pi"
+        />
+        <motion.img
+          initial="hidden"
+          animate="visible"
+          variants={textVariants}
+          transition={{ delay: 1.1, duration: 0.5 }}
+          src={banner}
+          className="pi2"
         />
       </StyledHeader>
     </div>

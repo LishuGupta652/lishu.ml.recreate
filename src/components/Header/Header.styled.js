@@ -23,6 +23,20 @@ export const StyledHeader = styled.div`
     z-index: 0;
     pointer-events: none;
   }
+  .pi2 {
+    position: absolute;
+    width: 300px;
+    bottom: 20px;
+    right: 50px;
+    width: 400px;
+    z-index: 0;
+    pointer-events: none;
+  }
+  @media (max-width: 820px) {
+    .pi2 {
+      display: none;
+    }
+  }
 `;
 
 export const StyledNavbar = styled.nav`
