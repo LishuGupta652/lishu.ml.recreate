@@ -103,6 +103,9 @@ export const StyledNavbar = styled.nav`
     font-size: 9px;
   }
 
+  .switch-icon {
+    cursor: pointer;
+  }
   .icon {
     width: 28px;
     height: 28px;

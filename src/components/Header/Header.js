@@ -19,7 +19,7 @@ const Header = () => {
   const [theme, setTheme] = useContext(Theme);
   const textVariants = {
     visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 30 },
   };
   const userPref = sessionStorage.getItem("theme");
 
@@ -32,7 +32,6 @@ const Header = () => {
             initial="hidden"
             animate="visible"
             variants={textVariants}
-            transition={{ delay: 0.5, duration: 0.3 }}
             onClick={() => setTheme()}
           >
             <Link to="/">lishu gupta</Link>
@@ -42,7 +41,7 @@ const Header = () => {
             initial="hidden"
             animate="visible"
             variants={textVariants}
-            transition={{ delay: 0.6, duration: 0.3 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
             className="switch-bar"
           >
             <div>
@@ -74,12 +73,7 @@ const Header = () => {
             </motion.label>
             <p>{theme === "dark" ? "Light" : "Dark"} mode</p> */}
           </motion.div>
-          <motion.ul
-            initial="hidden"
-            animate="visible"
-            variants={textVariants}
-            transition={{ delay: 0.5, duration: 0.3 }}
-          >
+          <motion.ul initial="hidden" animate="visible" variants={textVariants}>
             <li>
               <Link to="/blog">blog</Link>
             </li>
@@ -121,7 +115,13 @@ const Header = () => {
           </motion.h1>
         </HeaderText>
         <HeaderSideBar>
-          <div className="social">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="social"
+          >
             <a href="https://github.com/lishugupta652">
               <div className="github icon-container">
                 <svg className="icon" viewBox="0 0 24 24">
@@ -154,7 +154,7 @@ const Header = () => {
                 </svg>
               </div>
             </a>
-          </div>
+          </motion.div>
         </HeaderSideBar>
         <motion.img
           initial="hidden"
