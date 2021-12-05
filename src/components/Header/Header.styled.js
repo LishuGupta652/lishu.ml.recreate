@@ -13,7 +13,7 @@ export const StyledHeader = styled.div`
     ". . headerText headerText headerText headerText headerText headerText headerText headerText . ."
     ". . headerText headerText headerText headerText headerText headerText headerText headerText . ."
     ". . . . . . . . . . . ."
-    ". . . . . . . . . hs hs hs";
+    ". . . . . . . . . hs hs hs ";
 
   a:link {
     color: ${(props) => props.theme.colors.color};
@@ -49,7 +49,7 @@ export const StyledHeader = styled.div`
       " . headerText headerText headerText headerText headerText headerText headerText headerText  . . ."
       " . headerText headerText headerText headerText headerText headerText headerText headerText  . . ."
       ". . . . . . . . . . . ."
-      " . . . . . . . . . hs hs hs";
+      " . . . . . . .  hs hs hs . .";
   }
 
   .headerSidebar {
