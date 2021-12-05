@@ -26,9 +26,9 @@ export const StyledHeader = styled.div`
   .pi2 {
     position: absolute;
     width: 300px;
-    bottom: 20px;
+    bottom: -300px;
     right: 50px;
-    width: 400px;
+    width: 300px;
     z-index: 0;
     pointer-events: none;
   }

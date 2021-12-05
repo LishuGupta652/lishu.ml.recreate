@@ -3,9 +3,7 @@ import { StyledHeader, StyledNavbar, HeaderText } from "./Header.styled";
 import { motion } from "framer-motion";
 // Images
 import patternImg from "../../images/pattern.svg";
-import patternImg2 from "../../images/pattern_2.svg";
-import banner from "../../images/banner.svg";
-import switchImg from "../../images/switchImg.svg";
+import patternImg2 from "../../images/pattern2.svg";
 
 import Typed from "react-typed";
 
@@ -86,7 +84,7 @@ const Header = () => {
           animate="visible"
           variants={textVariants}
           transition={{ delay: 1.1, duration: 0.5 }}
-          src={patternImg}
+          src={patternImg2}
           className="pi"
         />
         <motion.img
@@ -94,7 +92,7 @@ const Header = () => {
           animate="visible"
           variants={textVariants}
           transition={{ delay: 1.1, duration: 0.5 }}
-          src={banner}
+          src={patternImg2}
           className="pi2"
         />
       </StyledHeader>
