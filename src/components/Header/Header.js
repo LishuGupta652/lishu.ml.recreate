@@ -56,12 +56,17 @@ const Header = () => {
             variants={textVariants}
             transition={{ delay: 0.9, duration: 0.3 }}
           >
-            <li>blog</li>
-
             <li>
-              <Link to="/project">projects</Link>
+              <Link to="/blog">blog</Link>
             </li>
-            <li>log in</li>
+            <li>
+              <a href="#projects" to="/#projects">
+                projects
+              </a>
+            </li>
+            <li>
+              <Link to="/login">login</Link>
+            </li>
           </motion.ul>
         </StyledNavbar>
         <HeaderText>

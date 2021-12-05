@@ -26,9 +26,9 @@ export const StyledHeader = styled.div`
     text-decoration: none;
   }
   a:hover {
-    color: ${(props) => props.theme.header.nav.color};
+    color: ${(props) => props.theme.colors.green};
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: none;
   }
   a:active {
     color: ${(props) => props.theme.header.nav.color};

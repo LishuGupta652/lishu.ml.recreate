@@ -85,7 +85,7 @@ const Work = () => {
 
   return (
     <StyledWork>
-      <h2>projects & works</h2>
+      <h2 id="projects">projects & works</h2>
       <SingleWork
         title={"dwarf.co.in"}
         link={"http://www.dwarf.co.in/"}
