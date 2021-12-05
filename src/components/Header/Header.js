@@ -48,7 +48,7 @@ const Header = () => {
               />
               <span class="slider round"></span>
             </motion.label>
-            <p>Dark mode</p>
+            <p>{theme === "dark" ? "Light" : "Dark"} mode</p>
           </motion.div>
           <motion.ul
             initial="hidden"
