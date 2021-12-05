@@ -40,6 +40,11 @@ export const FlexContainer = styled.div`
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
   }
+  .item01 video {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  }
 
   .flex-items:nth-child(2) {
     display: block;
