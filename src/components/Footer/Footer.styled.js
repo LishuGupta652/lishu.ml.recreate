@@ -38,15 +38,12 @@ export const StyledFooter = styled.div`
   .social {
     display: flex;
   }
-
-  .social img {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    fill: red;
+  .icon-container {
     margin-right: 20px;
   }
-  .social svg path {
-    fill: red !important;
+  .icon {
+    width: 34px;
+    height: 34px;
+    color: ${(props) => props.theme.colors.white};
   }
 `;

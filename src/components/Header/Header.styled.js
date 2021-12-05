@@ -100,6 +100,11 @@ export const StyledNavbar = styled.nav`
     font-size: 9px;
   }
 
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
   ul {
     display: flex;
     align-items: center;
