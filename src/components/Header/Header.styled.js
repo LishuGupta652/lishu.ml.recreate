@@ -13,7 +13,7 @@ export const StyledHeader = styled.div`
     ". . headerText headerText headerText headerText headerText headerText headerText headerText . ."
     ". . headerText headerText headerText headerText headerText headerText headerText headerText . ."
     ". . . . . . . . . . . ."
-    ". . . . . . . . . . . .";
+    ". . . . . . . . . hs hs hs";
 
   a:link {
     color: ${(props) => props.theme.colors.color};
@@ -49,9 +49,12 @@ export const StyledHeader = styled.div`
       " . headerText headerText headerText headerText headerText headerText headerText headerText  . . ."
       " . headerText headerText headerText headerText headerText headerText headerText headerText  . . ."
       ". . . . . . . . . . . ."
-      ". . . . . . . . . . . .";
+      " . . . . . . . . . hs hs hs";
   }
 
+  .headerSidebar {
+    grid-area: hs;
+  }
   .pi {
     position: absolute;
     width: 300px;
@@ -126,4 +129,22 @@ export const HeaderText = styled.div`
   grid-area: headerText;
   font-size: clamp(1rem, 2.5vw, 2rem);
   color: ${(props) => props.theme.colors.blue};
+`;
+export const HeaderSideBar = styled.div`
+  grid-area: hs;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  color: ${(props) => props.theme.colors.blue};
+
+  .social {
+    display: flex;
+  }
+  .icon-container {
+    margin-right: 20px;
+    cursor: poiner;
+  }
+  .icon {
+    width: 28px;
+    height: 28px;
+    color: ${(props) => props.theme.colors.color};
+  }
 `;

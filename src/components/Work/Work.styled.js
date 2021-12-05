@@ -108,6 +108,9 @@ export const FlexContainer = styled.div`
     margin: 10px 0;
     text-align: center;
   }
+  .head h1 {
+    font-size: clamp(1.5rem, 1.5vw, 1.7rem);
+  }
   .card .body {
     text-align: justify;
   }
