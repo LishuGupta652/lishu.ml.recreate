@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { FlexContainer, StyledWork } from "./Work.styled";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 
 // images
@@ -15,68 +17,99 @@ import scribble from "../../images/project/scribble.jpg";
 import auth from "../../images/project/authpassport.jpg";
 import trex from "../../images/project/dino.webm";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Work = () => {
   const textVariants = {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 40 },
   };
+  const wrapperRef = useRef(null);
+
+  useEffect(() => {
+    let proxy = { skew: 0 },
+      skewSetter = gsap.quickSetter(".work", "skewY", "deg"), // fast
+      clamp = gsap.utils.clamp(-3, 3); // don't let the skew go beyond 20 degrees.
+
+    ScrollTrigger.create({
+      onUpdate: (self) => {
+        let skew = clamp(self.getVelocity() / -500);
+        // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
+        if (Math.abs(skew) > Math.abs(proxy.skew)) {
+          proxy.skew = skew;
+          gsap.to(proxy, {
+            skew: 0,
+            duration: 0.4,
+            ease: "power4",
+            overwrite: true,
+            onUpdate: () => skewSetter(proxy.skew),
+          });
+        }
+      },
+    });
+
+    // make the right edge "stick" to the scroll bar. force3D: true improves performance
+    gsap.set(".work", { transformOrigin: "right center", force3D: true });
+  }, []);
 
   return (
     <StyledWork>
-      <h2>projects & works</h2>
-      <SingleWork
-        title={"dwarf.co.in"}
-        link={"http://www.dwarf.co.in/"}
-        img={dwarf}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"scs.dauniv.ac.in"}
-        img={scsit}
-        link={"http://www.scs.dauniv.ac.in/"}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"whatsapp"}
-        img={whatsapp}
-        link={"https://whatsappcosmos.web.app/"}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"instagramclone"}
-        img={instagram}
-        link={"https://instagramclonecosmos.web.app/"}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"Hotel booking App"}
-        img={hotel}
-        link={"https://hotelapp.lishu.ml/"}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"Paying Guest App"}
-        img={payingguest}
-        link={"http://www.payingguest.ml/"}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"Scribbling Pens"}
-        img={scribble}
-        link={"https://sp.lishu.ml/"}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"Authentication With social sites"}
-        img={auth}
-        link={""}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWorkVideo
-        title={"automated Gaming"}
-        video={trex}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
+      <div class="work">
+        <h2>projects & works</h2>
+        <SingleWork
+          title={"dwarf.co.in"}
+          link={"http://www.dwarf.co.in/"}
+          img={dwarf}
+          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+        />
+        <SingleWork
+          title={"scs.dauniv.ac.in"}
+          img={scsit}
+          link={"http://www.scs.dauniv.ac.in/"}
+          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+        />
+        <SingleWork
+          title={"whatsapp"}
+          img={whatsapp}
+          link={"https://whatsappcosmos.web.app/"}
+          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+        />
+        <SingleWork
+          title={"instagramclone"}
+          img={instagram}
+          link={"https://instagramclonecosmos.web.app/"}
+          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+        />
+        <SingleWork
+          title={"Hotel booking App"}
+          img={hotel}
+          link={"https://hotelapp.lishu.ml/"}
+          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+        />
+        <SingleWork
+          title={"Paying Guest App"}
+          img={payingguest}
+          link={"http://www.payingguest.ml/"}
+          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+        />
+        <SingleWork
+          title={"Scribbling Pens"}
+          img={scribble}
+          link={"https://sp.lishu.ml/"}
+          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+        />
+        <SingleWork
+          title={"Authentication With social sites"}
+          img={auth}
+          link={""}
+          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+        />
+        <SingleWorkVideo
+          title={"automated Gaming"}
+          video={trex}
+          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+        />
+      </div>
     </StyledWork>
   );
 };
