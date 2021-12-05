@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 // Context api
 import { Theme } from "./contextapi/ThemeContext";
 import { useContext } from "react";
-import { NotFound } from "http-errors";
+import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/Footer";
 
 const lightTheme = {
@@ -71,10 +71,10 @@ function App() {
           <div className="app">
             <BrowserRouter>
               <Routes>
+                <Route path="*" element={<NotFound />} />
                 <Route path="/" exact element={<Home />} />
                 <Route path="/home" exact element={<Home />} />
                 <Route path="/project" exact element={<Project />} />
-                <Route path="*" exact element={<NotFound />} />
               </Routes>
             </BrowserRouter>
           </div>
