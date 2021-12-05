@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import { Theme } from "./contextapi/ThemeContext";
 import { useContext } from "react";
 import { NotFound } from "http-errors";
+import Footer from "./components/Footer/Footer";
 
 const lightTheme = {
   header: {
@@ -26,6 +27,8 @@ const lightTheme = {
     green: "#2ecc71",
     greenTrans: "rgba(46, 204, 112, 0.1)",
     blue: "#30336b",
+    footer: "#30336b",
+    white: "#fafafa",
   },
   mobile: "786px",
 };
@@ -43,6 +46,8 @@ const darkTheme = {
     green: "#2ecc71",
     greenTrans: "rgba(46, 204, 112, 0.4)",
     blue: "#fafafa",
+    footer: "#30336b",
+    white: "#fafafa",
   },
   mobile: "786px",
 };
@@ -74,6 +79,7 @@ function App() {
             </BrowserRouter>
           </div>
         </StyledApp>
+        <Footer />
       </ThemeProvider>
     </>
   );
