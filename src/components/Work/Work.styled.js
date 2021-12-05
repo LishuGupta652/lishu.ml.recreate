@@ -3,20 +3,20 @@ import styled from "styled-components";
 export const StyledWork = styled.div`
   width: 95%;
   margin: 0 auto;
-  margin-top: 100px;
+  padding-top: 100px;
 
   color: ${(props) => props.theme.colors.color};
 
   h2 {
     letter-spacing: 10px;
     text-transform: uppercase;
-    margin: 30px;
+    padding: 30px;
     font-size: clamp(1rem, 3.5vw, 2.5rem);
   }
 `;
 
 export const FlexContainer = styled.div`
-  margin: 30px 0;
+  padding: 30px 0;
   .flex-container {
     display: flex;
     flex-direction: row;

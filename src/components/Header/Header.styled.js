@@ -15,6 +15,27 @@ export const StyledHeader = styled.div`
     ". . . . . . . . . . . ."
     ". . . . . . . . . . . .";
 
+  a:link {
+    color: ${(props) => props.theme.header.nav.color};
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: ${(props) => props.theme.header.nav.color};
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: ${(props) => props.theme.header.nav.color};
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: ${(props) => props.theme.header.nav.color};
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
   @media (max-width: 720px) {
     display: grid;
     position: relative;

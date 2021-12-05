@@ -2,6 +2,7 @@ import "./css/app.css";
 
 // components
 import Home from "./pages/Home";
+import Project from "./pages/Project";
 import styled, { ThemeProvider } from "styled-components";
 // BrowserRouter
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -64,6 +65,7 @@ function App() {
               <Routes>
                 <Route path="/" exact element={<Home />} />
                 <Route path="/home" exact element={<Home />} />
+                <Route path="/project" exact element={<Project />} />
               </Routes>
             </BrowserRouter>
           </div>

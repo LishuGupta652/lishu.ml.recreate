@@ -8,6 +8,7 @@ import patternImg2 from "../../images/pattern2.svg";
 import Typed from "react-typed";
 
 import { Theme } from "../../contextapi/ThemeContext";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [theme, setTheme] = useContext(Theme);
@@ -56,7 +57,10 @@ const Header = () => {
             transition={{ delay: 0.9, duration: 0.3 }}
           >
             <li>blog</li>
-            <li>PROJECTS</li>
+
+            <li>
+              <Link to="/project">projects</Link>
+            </li>
             <li>log in</li>
           </motion.ul>
         </StyledNavbar>
