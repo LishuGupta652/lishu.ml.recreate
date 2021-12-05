@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 // images
 import dwarf from "../../images/project/dwarf.jpg";
+import scsit from "../../images/project/scsit.jpg";
 
 const Work = () => {
   const textVariants = {
@@ -14,23 +15,39 @@ const Work = () => {
 
   return (
     <StyledWork>
-      <h2>projects</h2>
-      <SingleWork />
+      <h2>projects & works</h2>
+      <SingleWork
+        title={"dwarf.co.in"}
+        link={"http://www.dwarf.co.in/"}
+        img={dwarf}
+      />
+      <SingleWork
+        title={"scs.dauniv.ac.in"}
+        img={scsit}
+        link={"http://www.scs.dauniv.ac.in/"}
+      />
+      <SingleWork
+        title={"dwarf.co.in"}
+        img={dwarf}
+        link={"http://www.scs.dauniv.ac.in/"}
+      />
     </StyledWork>
   );
 };
 
-const SingleWork = () => {
+const SingleWork = ({ img, title, link }) => {
   return (
     <FlexContainer>
       <div class="flex-container">
         <div class="flex-items item01">
-          <img src={dwarf} alt="" />
+          <img src={img} alt="" />
         </div>
         <div class="flex-items item02">
           <div className="card">
             <div className="head">
-              <h1>dwarf.co.in</h1>
+              <a href={link} target="_blank">
+                <h1>{title}</h1>
+              </a>
             </div>
             <div className="body">
               Complete Responsive Design made with ReactJS, Firebase
