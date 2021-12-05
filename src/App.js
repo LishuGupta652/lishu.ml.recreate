@@ -38,7 +38,7 @@ const darkTheme = {
     color: "#fafafa",
     background: "#212121",
     green: "#2ecc71",
-    greenTrans: "rgba(46, 204, 112, 0.1)",
+    greenTrans: "rgba(46, 204, 112, 0.4)",
   },
   mobile: "786px",
 };

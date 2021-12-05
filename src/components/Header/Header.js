@@ -32,20 +32,29 @@ const Header = () => {
             lishu gupta
           </motion.h2>
           {/* opacity 0 in css */}
-          <motion.ul
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={textVariants}
             transition={{ delay: 0.9, duration: 0.3 }}
+            className="switch-bar"
           >
-            <label class="switch">
+            <motion.label class="switch">
               <input
                 type="checkbox"
                 onClick={() => setTheme()}
                 {...(userPref === "light" ? "" : "checked")}
               />
               <span class="slider round"></span>
-            </label>
+            </motion.label>
+            <p>Dark mode</p>
+          </motion.div>
+          <motion.ul
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+            transition={{ delay: 0.9, duration: 0.3 }}
+          >
             <li>blog</li>
             <li>PROJECTS</li>
             <li>log in</li>

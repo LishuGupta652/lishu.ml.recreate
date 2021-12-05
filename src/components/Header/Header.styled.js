@@ -57,6 +57,10 @@ export const StyledNavbar = styled.nav`
   h2:hover {
     color: ${(props) => props.theme.colors.green};
   }
+  .switch-bar {
+    color: ${(props) => props.theme.colors.color};
+    font-size: 9px;
+  }
 
   ul {
     display: flex;
@@ -67,7 +71,7 @@ export const StyledNavbar = styled.nav`
   ul li {
     margin-right: 20px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: clamp(0.5rem, 0.8vw, 2rem);
     transition: 0.2s ease-in-out;
   }
   ul li:hover {
