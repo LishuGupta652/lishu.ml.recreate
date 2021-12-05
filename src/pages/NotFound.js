@@ -8,6 +8,8 @@ import NotFoundGif from "../images/notfound.gif";
 
 const StyledNotFound = styled.div`
   min-height: 500px;
+  width: 95%;
+  margin: 0 auto;
 
   .heading h1 {
     font-size: clamp(3rem, 4.5vw, 5rem);
