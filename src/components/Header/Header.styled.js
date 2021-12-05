@@ -9,11 +9,27 @@ export const StyledHeader = styled.div`
   grid-auto-flow: row;
   grid-template-areas:
     "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar"
-    "headerSidebar . . . . . . . . . . ."
-    "headerSidebar . headerText headerText headerText headerText headerText headerText headerText headerText . ."
-    "headerSidebar . headerText headerText headerText headerText headerText headerText headerText headerText . ."
-    "headerSidebar . . . . . . . . . . ."
-    "headerSidebar . . . . . . . . . . .";
+    ". . . . . . . . . . . ."
+    ". . headerText headerText headerText headerText headerText headerText headerText headerText . ."
+    ". . headerText headerText headerText headerText headerText headerText headerText headerText . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . .";
+
+  @media (max-width: 720px) {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar"
+      ". . . . . . . . . . . ."
+      " . headerText headerText headerText headerText headerText headerText headerText headerText  . . ."
+      " . headerText headerText headerText headerText headerText headerText headerText headerText  . . ."
+      ". . . . . . . . . . . ."
+      ". . . . . . . . . . . .";
+  }
 
   .pi {
     position: absolute;
@@ -53,6 +69,7 @@ export const StyledNavbar = styled.nav`
     transition: 0.2s ease-in-out;
     cursor: pointer;
     z-index: 10;
+    font-size: clamp(1rem, 1.2vw, 2rem);
   }
   h2:hover {
     color: ${(props) => props.theme.colors.green};
