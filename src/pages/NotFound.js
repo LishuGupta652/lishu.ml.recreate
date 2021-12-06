@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Skills from "../components/About/Skills";
 import Header from "../components/Header/Header";
@@ -18,6 +19,8 @@ const StyledNotFound = styled.div`
     width: 100%;
     border-radius: 20px;
   }
+  h3 {
+  }
 `;
 
 const NotFound = () => {
@@ -26,6 +29,9 @@ const NotFound = () => {
       <Header />
       <StyledNotFound>
         <div className="heading">
+          <Link to="/">
+            <h3>Return to home page</h3>
+          </Link>
           <img src={NotFoundGif} alt="" />
         </div>
       </StyledNotFound>

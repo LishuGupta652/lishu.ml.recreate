@@ -92,7 +92,7 @@ const Work = () => {
         link={"http://www.dwarf.co.in/"}
         img={dwarf}
         desc={"Complete Responsive Design made with ReactJS, Firebase"}
-        route={"dwarf"}
+        route={"dwarf#"}
       />
       <div class="work">
         <SingleWork
