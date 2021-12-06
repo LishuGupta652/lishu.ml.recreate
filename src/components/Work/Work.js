@@ -20,6 +20,7 @@ import scribble from "../../images/project/scribble.jpg";
 import auth from "../../images/project/authpassport.jpg";
 import detect from "../../images/project/gitmandetect.jpg";
 import trex from "../../images/project/dino.webm";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,6 +92,7 @@ const Work = () => {
         link={"http://www.dwarf.co.in/"}
         img={dwarf}
         desc={"Complete Responsive Design made with ReactJS, Firebase"}
+        route={"dwarf"}
       />
       <div class="work">
         <SingleWork
@@ -155,13 +157,15 @@ const Work = () => {
   );
 };
 
-const SingleWork = ({ img, title, link, desc, ref }) => {
+const SingleWork = ({ img, title, link, desc, ref, route }) => {
   return (
     <FlexContainer>
       <div className="animScroll">
         <div class="flex-container" ref={ref}>
           <div class="flex-items item01">
-            <img src={img} alt={title} />
+            <Link to={`/project/${route}`}>
+              <img src={img} alt={title} />
+            </Link>
           </div>
           <div class="flex-items item02">
             <div className="card">

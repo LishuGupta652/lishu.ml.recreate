@@ -8,7 +8,7 @@ const Footer = () => {
           <div class="flex-items f01">Made with ♥ by lishu gupta.</div>
           <div class="flex-items f02">
             <div className="social">
-              <a href="https://github.com/lishugupta652">
+              <a href="https://github.com/lishugupta652" target="blank">
                 <div className="github icon-container">
                   <svg className="icon" viewBox="0 0 24 24">
                     <path
@@ -19,7 +19,10 @@ const Footer = () => {
                 </div>
               </a>
 
-              <a href="https://www.linkedin.com/in/lishugupta652/">
+              <a
+                href="https://www.linkedin.com/in/lishugupta652/"
+                target="blank"
+              >
                 <div className="linkedin icon-container">
                   <svg className="icon" viewBox="0 0 24 24">
                     <path
@@ -30,7 +33,7 @@ const Footer = () => {
                 </div>
               </a>
 
-              <a href="https://twitter.com/lishugupta652">
+              <a href="https://twitter.com/lishugupta652" target="blank">
                 <div className="twitter icon-container">
                   <svg className="icon" viewBox="0 0 24 24">
                     <path
