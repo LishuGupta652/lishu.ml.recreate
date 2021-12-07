@@ -141,7 +141,15 @@ const Work = () => {
   return (
     <StyledWork>
       <h2 id="projects">projects & works</h2>
-      {projectArray.map(({ title, link, img, desc, route, featured }) => {})}
+      {projectArray.map(({ title, link, img, desc, route, featured }) => {
+        <SingleWork
+          title={"dwarf.co.in"}
+          link={"http://www.dwarf.co.in/"}
+          img={dwarf}
+          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+          route={"dwarf/#"}
+        />;
+      })}
       <div class="work">
         <SingleWork
           title={"scs.dauniv.ac.in"}
