@@ -29,34 +29,6 @@ const Work = () => {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 40 },
   };
-  const wrapperRef = useRef(null);
-
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0,
-  });
-
-  if (inView) {
-    gsap.fromTo(
-      ref.current,
-      { autoAlpha: 0, y: 20, scale: 0.95 },
-      {
-        duration: 0.15,
-        autoAlpha: 1,
-        scale: 1,
-        y: 0,
-        ease: "power3",
-        scrollTrigger: {
-          id: "sectionref",
-          trigger: wrapperRef.current,
-          toggleActions: "play none none none",
-          start: "top center",
-          //   end: "bottom center",
-          //   toggleClass: "active",
-        },
-      }
-    );
-  }
 
   useEffect(() => {
     let proxy = { skew: 0 },
@@ -84,19 +56,94 @@ const Work = () => {
     gsap.set(".animScroll", { transformOrigin: "right center", force3D: true });
   }, []);
 
+  const projectArray = [
+    {
+      title: "dwarf.co.in",
+      link: "http://www.dwarf.co.in/",
+      img: dwarf,
+      desc: "Complete Responsive Design made with ReactJS, Firebase",
+      route: "dwarf/#",
+      featured: true,
+    },
+    {
+      title: "scs.dauniv.ac.in",
+      link: "http://www.scs.dauniv.ac.in/",
+      img: scsit,
+      desc: "Complete Responsive Design made with ReactJS, Firebase",
+      route: "scsit/#",
+      featured: true,
+    },
+    {
+      title: "whatsapp",
+      link: "https://whatsappcosmos.web.app/",
+      img: whatsapp,
+      desc: "Complete Responsive Design made with ReactJS, Firebase",
+      route: "whatsapp/#",
+      featured: true,
+    },
+    {
+      title: "instagramclone",
+      link: "ttps://instagramclonecosmos.web.app/",
+      img: instagram,
+      desc: "Complete Responsive Design made with ReactJS, Firebase",
+      route: "instagram/#",
+      featured: true,
+    },
+    {
+      title: "scs.dauniv.ac.in",
+      link: "http://www.scs.dauniv.ac.in/",
+      img: scsit,
+      desc: "Complete Responsive Design made with ReactJS, Firebase",
+      route: "scsit/#",
+      featured: false,
+    },
+    {
+      title: "Hotel booking App",
+      link: "https://hotelapp.lishu.ml/",
+      img: hotel,
+      desc: "Complete Responsive Design made with ReactJS, Firebase",
+      route: "hotel/#",
+      featured: false,
+    },
+    {
+      title: "Paying Guest App",
+      link: "http://www.payingguest.ml/",
+      img: payingguest,
+      desc: "Complete Responsive Design made with ReactJS, Firebase",
+      route: "payingguest/#",
+      featured: false,
+    },
+    {
+      title: "Scribbling Pens",
+      link: "https://sp.lishu.ml/",
+      img: scribble,
+      desc: "Complete Responsive Design made with ReactJS, Firebase",
+      route: "hotel/#",
+      featured: false,
+    },
+    {
+      title: "Facerecognition using ReactJS",
+      link: "https://sp.lishu.ml/",
+      img: detect,
+      desc: "Complete Responsive Design made with ReactJS, Firebase",
+      route: "detect/#",
+      featured: false,
+    },
+    {
+      title: "Azael India",
+      link: "#",
+      img: azael,
+      desc: "Complete Responsive Design made with ReactJS, Firebase",
+      route: "detect/#",
+      featured: false,
+    },
+  ];
   return (
     <StyledWork>
       <h2 id="projects">projects & works</h2>
-      <SingleWork
-        title={"dwarf.co.in"}
-        link={"http://www.dwarf.co.in/"}
-        img={dwarf}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-        route={"dwarf#"}
-      />
+      {projectArray.map(({ title, link, img, desc, route, featured }) => {})}
       <div class="work">
         <SingleWork
-          ref={ref}
           title={"scs.dauniv.ac.in"}
           img={scsit}
           link={"http://www.scs.dauniv.ac.in/"}

@@ -6,6 +6,8 @@ import Work from "../components/Work/Work";
 // Assets
 import dwarfGif from "../images/project/dwarf_main.gif";
 const WorkContainer = styled.div`
+  width: 95%;
+  margin: 0 auto;
   h1 {
     text-align: center;
     color: ${(props) => props.theme.colors.blue};
