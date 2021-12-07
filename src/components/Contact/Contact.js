@@ -2,24 +2,37 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { StyledContact } from "./Contact.styled";
 
-import emailjs from "emailjs-com";
+import emailjs, { init } from "emailjs-com";
 
 const Contact = () => {
   const sendEmail = (e) => {
+    init("user_MGQ1yKwR8uOvWEbJANvBY");
     e.preventDefault();
     console.log(name, email, phone, subject, message);
-    // emailjs
-    //   .send("gmail", "template_86vlrlz", e.target, "user_MGQ1yKwR8uOvWEbJANvBY")
-    //   .then(
-    //     function (response) {
-    //       console.log("SUCCESS!", response.status, response.text);
-    //     },
-    //     function (error) {
-    //       console.log("FAILED...", error);
-    //     }
-    //   );
-    // e.target.reset();
+    emailjs
+      .send("service_m064vle", "template_86vlrlz", {
+        name,
+        email,
+        phone,
+        subject,
+        message,
+      })
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+    e.target.reset();
     console.log("Email sent");
+
+    setname("");
+    setemail("");
+    setphone("");
+    setsubject("");
+    setmessage("");
   };
 
   const [name, setname] = useState("");
