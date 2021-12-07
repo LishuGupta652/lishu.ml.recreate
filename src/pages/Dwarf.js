@@ -30,6 +30,9 @@ const WorkContainer = styled.div`
 `;
 
 const Dwarf = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Header />

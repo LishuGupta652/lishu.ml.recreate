@@ -33,6 +33,11 @@ export const StyledWork = styled.div`
     padding: 30px;
     font-size: clamp(1rem, 3.5vw, 2.5rem);
   }
+  .show-more {
+    text-align: center;
+    color: ${(props) => props.theme.colors.blue};
+    text-transform: uppercase;
+  }
 `;
 
 export const FlexContainer = styled.div`

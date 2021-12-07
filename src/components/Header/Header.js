@@ -34,7 +34,9 @@ const Header = () => {
             variants={textVariants}
             onClick={() => setTheme()}
           >
-            <Link to="/">lishu gupta</Link>
+            <Link to="/" id="home">
+              lishu gupta
+            </Link>
           </motion.h2>
           {/* opacity 0 in css */}
           <motion.div
@@ -78,9 +80,9 @@ const Header = () => {
               <Link to="/blog">blog</Link>
             </li>
             <li>
-              <a href="/#projects" to="/#projects">
+              <Link href="/projects" to="/projects">
                 projects
-              </a>
+              </Link>
             </li>
             <li>
               <a href="https://auth.lishu.ml/login">login</a>

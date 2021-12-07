@@ -74,7 +74,7 @@ function App() {
               <Routes>
                 <Route path="/" exact element={<Home />} />
                 <Route path="/home" exact element={<Home />} />
-                <Route path="/project" exact element={<Project />} />
+                <Route path="/projects" exact element={<Project />} />
                 <Route path="/blog" exact element={<Project />} />
                 <Route path="/project/dwarf" exact element={<Dwarf />} />
                 <Route path="*" element={<NotFound />} />

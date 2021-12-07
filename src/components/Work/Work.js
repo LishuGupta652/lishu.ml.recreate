@@ -24,7 +24,7 @@ import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Work = () => {
+const Work = ({ showFeatured }) => {
   const textVariants = {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 40 },
@@ -62,7 +62,7 @@ const Work = () => {
       link: "http://www.dwarf.co.in/",
       img: dwarf,
       desc: "Complete Responsive Design made with ReactJS, Firebase",
-      route: "dwarf/#",
+      route: "dwarf/#home",
       featured: true,
     },
     {
@@ -141,73 +141,31 @@ const Work = () => {
   return (
     <StyledWork>
       <h2 id="projects">projects & works</h2>
-      {projectArray.map(({ title, link, img, desc, route, featured }) => {
-        <SingleWork
-          title={"dwarf.co.in"}
-          link={"http://www.dwarf.co.in/"}
-          img={dwarf}
-          desc={"Complete Responsive Design made with ReactJS, Firebase"}
-          route={"dwarf/#"}
-        />;
-      })}
-      <div class="work">
-        <SingleWork
-          title={"scs.dauniv.ac.in"}
-          img={scsit}
-          link={"http://www.scs.dauniv.ac.in/"}
-          desc={"Complete Responsive Design made with ReactJS, Firebase"}
-        />
-      </div>
-      <SingleWork
-        title={"whatsapp"}
-        img={whatsapp}
-        link={"https://whatsappcosmos.web.app/"}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"instagramclone"}
-        img={instagram}
-        link={"https://instagramclonecosmos.web.app/"}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"Hotel booking App"}
-        img={hotel}
-        link={"https://hotelapp.lishu.ml/"}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"Paying Guest App"}
-        img={payingguest}
-        link={"http://www.payingguest.ml/"}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"Scribbling Pens"}
-        img={scribble}
-        link={"https://sp.lishu.ml/"}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"Authentication With social sites"}
-        img={auth}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"Facerecognition using ReactJS"}
-        img={detect}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
-      <SingleWork
-        title={"Azael India"}
-        img={azael}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
+      {projectArray
+        .filter((project) => (showFeatured ? project.featured : true))
+        .map(({ title, link, img, desc, route, featured }) => {
+          return (
+            <SingleWork
+              title={title}
+              link={link}
+              img={img}
+              desc={desc}
+              route={route}
+            />
+          );
+        })}
+
       <SingleWorkVideo
         title={"automated Gaming"}
         video={trex}
         desc={"Complete Responsive Design made with ReactJS, Firebase"}
       />
+
+      {showFeatured && (
+        <h1 className="show-more">
+          <Link to="/projects">show more</Link>
+        </h1>
+      )}
     </StyledWork>
   );
 };

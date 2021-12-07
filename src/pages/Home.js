@@ -6,11 +6,15 @@ import Header from "../components/Header/Header";
 import Work from "../components/Work/Work";
 
 const Home = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Header />
       <Skills />
-      <Work />
+      <Work showFeatured={true} />
     </div>
   );
 };
