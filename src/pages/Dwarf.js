@@ -3,12 +3,27 @@ import styled from "styled-components";
 import Header from "../components/Header/Header";
 import Work from "../components/Work/Work";
 
+// Assets
+import dwarfGif from "../images/project/dwarf_main.gif";
 const WorkContainer = styled.div`
   h1 {
     text-align: center;
     color: ${(props) => props.theme.colors.blue};
     text-transform: uppercase;
     font-size: clamp(2rem, 3.5vw, 4rem);
+    font-family: "Luxurious Script", cursive;
+    letter-spacing: 5px;
+    padding: 30px 0;
+  }
+  .videoMainWrap {
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 0;
+  }
+  .videoMain {
+    width: 100%;
+    magin: 0 auto;
+    border-radius: 20px;
   }
 `;
 
@@ -19,8 +34,10 @@ const Dwarf = () => {
       <WorkContainer>
         <a href="https://www.dwarf.co.in" target="_blank">
           <h1>Dwarf.co.in</h1>
+          <div className="videoMainWrap">
+            <img className="videoMain" src={dwarfGif} alt="" />
+          </div>
         </a>
-        9952
       </WorkContainer>
     </div>
   );
