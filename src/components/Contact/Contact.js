@@ -3,16 +3,17 @@ import styled from "styled-components";
 import { StyledContact } from "./Contact.styled";
 
 import emailjs, { init } from "emailjs-com";
-
+const user = "user_MGQ1yKwR8uOvWEbJANvBY";
+const service = "service_jv9be6o";
+const template = "template_86vlrlz";
 const Contact = () => {
   const [error, setError] = useState("");
   const [success, setsuccess] = useState("");
   const sendEmail = (e) => {
     e.preventDefault();
-    init("user_MGQ1yKwR8uOvWEbJANvBY");
-    console.log(name, email, phone, subject, message);
+    init(user);
     emailjs
-      .send("service_m064vle", "template_86vlrlz", {
+      .send(service, template, {
         name,
         email,
         phone,
@@ -30,7 +31,6 @@ const Contact = () => {
         }
       );
     e.target.reset();
-    console.log("Email sent");
 
     setname("");
     setemail("");
