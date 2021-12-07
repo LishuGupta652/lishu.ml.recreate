@@ -16,7 +16,6 @@ const Skills = () => {
 
   useEffect(() => {
     if (inView) {
-      console.log(inView, controls);
       controls.start((i) => ({
         opacity: 1,
         y: 0,
@@ -31,8 +30,10 @@ const Skills = () => {
       <div class="skills">
         <motion.div
           ref={refView}
+          variants={textVariants}
           animate={controls}
-          custom={3}
+          variants={textVariants}
+          custom={2.4}
           initial="hidden"
           class="card one"
         >

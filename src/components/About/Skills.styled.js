@@ -13,6 +13,7 @@ export const StyledAbout = styled.div`
   h1 {
     font-size: clamp(2rem, 3.5vw, 3rem);
     margin: 30px 0;
+    font-family: "Corinthia", cursive;
   }
 
   .card {

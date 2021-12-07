@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Montserrat:wght@100;300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Luxurious+Script&family=Montserrat:wght@100;300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
 
 :root {
   --background-color: #fafafa;
@@ -42,6 +42,7 @@ html {
   transition: 0.2s ease-in-out;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-family: "Corinthia", cursive;
   font-family: "Luxurious Script", cursive;
   font-family: "Montserrat", sans-serif;
   font-family: "Roboto", sans-serif;

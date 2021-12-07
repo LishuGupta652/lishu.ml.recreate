@@ -18,11 +18,6 @@ import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const textVariants = {
-  visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-  hidden: { opacity: 0, y: 40 },
-};
-
 const Work = ({ showFeatured }) => {
   useEffect(() => {
     let proxy = { skew: 0 },
@@ -50,25 +45,6 @@ const Work = ({ showFeatured }) => {
     gsap.set(".animScroll", { transformOrigin: "right center", force3D: true });
   }, []);
 
-  const controls = useAnimation();
-  const [refView, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
-  const variants = {
-    visible: (i) => ({
-      opacity: 1,
-      transition: {
-        delay: i * 0.3,
-      },
-    }),
-    hidden: { opacity: 0 },
-  };
-
   return (
     <motion.div>
       <StyledWork>
@@ -77,13 +53,14 @@ const Work = ({ showFeatured }) => {
           .filter((project) => (showFeatured ? project.featured : true))
           .map(({ title, link, img, desc, route, featured }, i) => {
             return (
-              <motion.div custom={i} animate="visible" variants={variants}>
+              <motion.div>
                 <SingleWork
                   title={title}
                   link={link}
                   img={img}
                   desc={desc}
                   route={route}
+                  i={i}
                 />
               </motion.div>
             );
@@ -105,28 +82,55 @@ const Work = ({ showFeatured }) => {
   );
 };
 
-const SingleWork = ({ img, title, link, desc, ref, route }) => {
+const SingleWork = ({ img, title, link, desc, ref, route, i }) => {
+  const controls = useAnimation();
+  const [refView, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const textVariants = {
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: { delay: 0.4, duration: 0.5 },
+    }),
+    hidden: { opacity: 0, x: 40 },
+  };
+
   return (
     <FlexContainer>
-      <motion.div className="animScroll">
-        <div class="flex-container" ref={ref}>
-          <div class="flex-items item01">
-            <Link to={`/project/${route}`}>
-              <img src={img} alt={title} />
-            </Link>
-          </div>
-          <div class="flex-items item02">
-            <div className="card">
-              <div className="head">
-                <a href={link} target="_blank">
-                  <h1 title={title}>{title}</h1>
-                </a>
+      <div className="animScroll">
+        <motion.div
+          custom={i}
+          initial="hidden"
+          ref={refView}
+          variants={textVariants}
+          animate={controls}
+          custom={i}
+        >
+          <div class="flex-container" ref={ref}>
+            <div class="flex-items item01">
+              <Link to={`/project/${route}`}>
+                <img src={img} alt={title} />
+              </Link>
+            </div>
+            <div class="flex-items item02">
+              <div className="card">
+                <div className="head">
+                  <a href={link} target="_blank">
+                    <h1 title={title}>{title}</h1>
+                  </a>
+                </div>
+                <div className="body">{desc}</div>
               </div>
-              <div className="body">{desc}</div>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </FlexContainer>
   );
 };
