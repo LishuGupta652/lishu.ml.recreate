@@ -84,7 +84,7 @@ export const StyledContact = styled.div`
     border: none;
     border-bottom: solid 2px #474544;
 
-    color: ${(props) => props.theme.colors.color};
+    color: ${(props) => props.theme.colors.blue};
     font-size: 1em;
     font-weight: 400;
     letter-spacing: 1px;
@@ -148,7 +148,7 @@ export const StyledContact = styled.div`
   }
 
   ::-webkit-input-placeholder {
-    color: ${(props) => props.theme.colors.color};
+    color: ${(props) => props.theme.colors.blue};
   }
 
   :-moz-placeholder {
@@ -169,7 +169,7 @@ export const StyledContact = styled.div`
     background: none;
     border: solid 2px #474544;
 
-    color: ${(props) => props.theme.colors.color};
+    color: ${(props) => props.theme.colors.blue};
     cursor: pointer;
     display: inline-block;
     font-family: "Helvetica", Arial, sans-serif;
@@ -232,5 +232,20 @@ export const StyledContact = styled.div`
     textarea {
       font-size: 0.875em;
     }
+  }
+
+  .social {
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+  }
+  .icon-container {
+    margin-right: 20px;
+    cursor: poiner;
+  }
+  .icon {
+    width: 28px;
+    height: 28px;
+    color: ${(props) => props.theme.colors.color};
   }
 `;
