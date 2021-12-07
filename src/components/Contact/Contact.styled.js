@@ -248,4 +248,14 @@ export const StyledContact = styled.div`
     height: 28px;
     color: ${(props) => props.theme.colors.color};
   }
+
+  .success {
+    color: green;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .error {
+    color: red;
+    text-align: center;
+  }
 `;

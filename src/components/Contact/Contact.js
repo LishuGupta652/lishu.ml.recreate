@@ -5,8 +5,11 @@ import { StyledContact } from "./Contact.styled";
 import emailjs, { init } from "emailjs-com";
 
 const Contact = () => {
+  const [error, setError] = useState("");
+  const [success, setsuccess] = useState("");
   const sendEmail = (e) => {
     e.preventDefault();
+    init("user_MGQ1yKwR8uOvWEbJANvBY");
     console.log(name, email, phone, subject, message);
     emailjs
       .send("service_m064vle", "template_86vlrlz", {
@@ -18,10 +21,12 @@ const Contact = () => {
       })
       .then(
         function (response) {
-          console.log("SUCCESS!", response.status, response.text);
+          setsuccess(
+            `Thank you  ${name} 😊. I will try to contact you as soon as possible. Till then checkout my social sites.`
+          );
         },
         function (error) {
-          console.log("FAILED...", error);
+          setError("Sorry! Mailing Server not working. 😥");
         }
       );
     e.target.reset();
@@ -120,6 +125,8 @@ const Contact = () => {
           <div class="submit">
             <input type="submit" value="Send Message" id="form_button" />
           </div>
+          <div className="error">{error}</div>
+          <div className="success">{success}</div>
           <div className="social">
             <a href="https://github.com/lishugupta652" target="blank">
               <div className="github icon-container">
