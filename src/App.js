@@ -30,6 +30,7 @@ const lightTheme = {
     blue: "#30336b",
     footer: "#30336b",
     white: "#fafafa",
+    lightBlack: "#838383",
   },
   mobile: "786px",
 };
@@ -49,6 +50,7 @@ const darkTheme = {
     blue: "#fafafa",
     footer: "#30336b",
     white: "#fafafa",
+    lightBlack: "#838383",
   },
   mobile: "786px",
 };

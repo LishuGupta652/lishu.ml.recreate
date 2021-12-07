@@ -18,7 +18,7 @@ export const StyledContact = styled.div`
   input,
   select,
   textarea {
-    color: ${(props) => props.theme.colors.color};
+    color: ${(props) => props.theme.colors.blue};
     font: inherit;
     margin: 0;
   }
@@ -44,7 +44,7 @@ export const StyledContact = styled.div`
   }
 
   h1 {
-    color: ${(props) => props.theme.colors.color};
+    color: ${(props) => props.theme.colors.blue};
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 7px;
@@ -84,7 +84,7 @@ export const StyledContact = styled.div`
     border: none;
     border-bottom: solid 2px #474544;
 
-    color: ${(props) => props.theme.colors.blue};
+    color: ${(props) => props.theme.colors.lightBlack};
     font-size: 1em;
     font-weight: 400;
     letter-spacing: 1px;
