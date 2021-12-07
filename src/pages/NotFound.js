@@ -5,6 +5,8 @@ import Skills from "../components/About/Skills";
 import Header from "../components/Header/Header";
 import Work from "../components/Work/Work";
 
+import { Helmet } from "react-helmet";
+
 import NotFoundGif from "../images/notfound.gif";
 
 const StyledNotFound = styled.div`
@@ -40,6 +42,11 @@ const NotFound = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>URL Not Found</title>
+        <meta name="title" content="Not Found | Portfolio" />
+        <meta name="author" content="Lishu Gupta" />
+      </Helmet>
       <Header />
       <StyledNotFound>
         <div className="heading">

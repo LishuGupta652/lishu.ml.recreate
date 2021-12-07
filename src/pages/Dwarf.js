@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Header from "../components/Header/Header";
 import Work from "../components/Work/Work";
 
+import { Helmet } from "react-helmet";
+
 // Assets
 import dwarfGif from "../images/project/dwarf_main.gif";
 const WorkContainer = styled.div`
@@ -33,8 +35,14 @@ const Dwarf = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div>
+      <Helmet>
+        <title>Dwarf | Lishu gupta</title>
+        <meta name="title" content="Dwarf | Lishu Gupta" />
+        <meta name="author" content="Lishu Gupta" />
+      </Helmet>
       <Header />
       <WorkContainer>
         <a href="https://www.dwarf.co.in" target="_blank">
