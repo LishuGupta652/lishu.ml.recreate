@@ -6,7 +6,6 @@ import emailjs, { init } from "emailjs-com";
 
 const Contact = () => {
   const sendEmail = (e) => {
-    init("user_MGQ1yKwR8uOvWEbJANvBY");
     e.preventDefault();
     console.log(name, email, phone, subject, message);
     emailjs
