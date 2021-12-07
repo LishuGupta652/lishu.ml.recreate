@@ -69,7 +69,9 @@ const Work = ({ showFeatured }) => {
         <SingleWorkVideo
           title={"automated Gaming"}
           video={trex}
-          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+          desc={
+            "Implementing learning of Python used PIL and other library in python to make this app which can play Trex game automatically."
+          }
         />
 
         {showFeatured && (
