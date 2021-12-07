@@ -37,6 +37,10 @@ export const StyledWork = styled.div`
     text-align: center;
     color: ${(props) => props.theme.colors.blue};
     text-transform: uppercase;
+    padding: 20px;
+    font-weight: 100;
+    border-radius: 20px;
+    border: 1px solid ${(props) => props.theme.colors.blue};
   }
 `;
 
@@ -108,6 +112,7 @@ export const FlexContainer = styled.div`
     padding: 20px;
     background-color: ${(props) => props.theme.colors.greenTrans};
     border-radius: 10px;
+    width: 100%;
   }
   .card .head {
     margin: 10px 0;
@@ -118,5 +123,16 @@ export const FlexContainer = styled.div`
   }
   .card .body {
     text-align: justify;
+  }
+
+  @media (max-width: 820px) {
+    .card {
+      margin: 0;
+      text-align: center;
+      padding: 20px;
+      background-color: ${(props) => props.theme.colors.greenTrans};
+      border-radius: 10px;
+      width: 100%;
+    }
   }
 `;

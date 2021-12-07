@@ -3,7 +3,7 @@ import { FlexContainer, StyledWork } from "./Work.styled";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { motion } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
 
 // intersection observer
 import { useInView } from "react-intersection-observer";
@@ -23,6 +23,11 @@ import trex from "../../images/project/dino.webm";
 import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const squareVariants = {
+  visible: { opacity: 1, y: 0, transition: { delay: 2, duration: 1 } },
+  hidden: { opacity: 0, y: 40 },
+};
 
 const Work = ({ showFeatured }) => {
   const textVariants = {
@@ -138,42 +143,53 @@ const Work = ({ showFeatured }) => {
       featured: false,
     },
   ];
+  const controls = useAnimation();
+  const [refView, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
-    <StyledWork>
-      <h2 id="projects">projects & works</h2>
-      {projectArray
-        .filter((project) => (showFeatured ? project.featured : true))
-        .map(({ title, link, img, desc, route, featured }) => {
-          return (
-            <SingleWork
-              title={title}
-              link={link}
-              img={img}
-              desc={desc}
-              route={route}
-            />
-          );
-        })}
+    <motion.div ref={refView} variants={textVariants} animate={controls}>
+      <StyledWork>
+        <h2 id="projects">projects & works</h2>
+        {projectArray
+          .filter((project) => (showFeatured ? project.featured : true))
+          .map(({ title, link, img, desc, route, featured }) => {
+            return (
+              <SingleWork
+                title={title}
+                link={link}
+                img={img}
+                desc={desc}
+                route={route}
+              />
+            );
+          })}
 
-      <SingleWorkVideo
-        title={"automated Gaming"}
-        video={trex}
-        desc={"Complete Responsive Design made with ReactJS, Firebase"}
-      />
+        <SingleWorkVideo
+          title={"automated Gaming"}
+          video={trex}
+          desc={"Complete Responsive Design made with ReactJS, Firebase"}
+        />
 
-      {showFeatured && (
-        <h1 className="show-more">
-          <Link to="/projects">show more</Link>
-        </h1>
-      )}
-    </StyledWork>
+        {showFeatured && (
+          <Link to="/projects">
+            <h3 className="show-more">show more</h3>
+          </Link>
+        )}
+      </StyledWork>
+    </motion.div>
   );
 };
 
 const SingleWork = ({ img, title, link, desc, ref, route }) => {
   return (
     <FlexContainer>
-      <div className="animScroll">
+      <motion.div className="animScroll">
         <div class="flex-container" ref={ref}>
           <div class="flex-items item01">
             <Link to={`/project/${route}`}>
@@ -191,7 +207,7 @@ const SingleWork = ({ img, title, link, desc, ref, route }) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </FlexContainer>
   );
 };
@@ -199,7 +215,7 @@ const SingleWork = ({ img, title, link, desc, ref, route }) => {
 const SingleWorkVideo = ({ video, title, link, desc }) => {
   return (
     <FlexContainer>
-      <div className="">
+      <motion.div variants={squareVariants} className="square">
         <div class="flex-container">
           <div class="flex-items item01">
             <video autoStart autoPlay src={video} type="video/mp4" />
@@ -215,7 +231,7 @@ const SingleWorkVideo = ({ video, title, link, desc }) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </FlexContainer>
   );
 };
