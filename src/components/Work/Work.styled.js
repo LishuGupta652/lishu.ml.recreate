@@ -32,6 +32,8 @@ export const StyledWork = styled.div`
     text-transform: uppercase;
     padding: 30px;
     font-size: clamp(1rem, 3.5vw, 2.5rem);
+
+    font-family: "Corinthia", cursive;
   }
   .show-more {
     text-align: center;
