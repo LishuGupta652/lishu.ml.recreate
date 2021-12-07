@@ -24,17 +24,12 @@ import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const squareVariants = {
-  visible: { opacity: 1, y: 0, transition: { delay: 2, duration: 1 } },
+const textVariants = {
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   hidden: { opacity: 0, y: 40 },
 };
 
 const Work = ({ showFeatured }) => {
-  const textVariants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 40 },
-  };
-
   useEffect(() => {
     let proxy = { skew: 0 },
       skewSetter = gsap.quickSetter(".animScroll", "skewY", "deg"), // fast
@@ -152,21 +147,38 @@ const Work = ({ showFeatured }) => {
     }
   }, [controls, inView]);
 
+  const variants = {
+    visible: (i) => ({
+      opacity: 1,
+      transition: {
+        delay: i * 0.3,
+      },
+    }),
+    hidden: { opacity: 0 },
+  };
+
   return (
-    <motion.div ref={refView} variants={textVariants} animate={controls}>
+    <motion.div
+      ref={refView}
+      variants={textVariants}
+      animate={controls}
+      initial="hidden"
+    >
       <StyledWork>
         <h2 id="projects">projects & works</h2>
         {projectArray
           .filter((project) => (showFeatured ? project.featured : true))
           .map(({ title, link, img, desc, route, featured }) => {
             return (
-              <SingleWork
-                title={title}
-                link={link}
-                img={img}
-                desc={desc}
-                route={route}
-              />
+              <motion.div>
+                <SingleWork
+                  title={title}
+                  link={link}
+                  img={img}
+                  desc={desc}
+                  route={route}
+                />
+              </motion.div>
             );
           })}
 
@@ -215,7 +227,7 @@ const SingleWork = ({ img, title, link, desc, ref, route }) => {
 const SingleWorkVideo = ({ video, title, link, desc }) => {
   return (
     <FlexContainer>
-      <motion.div variants={squareVariants} className="square">
+      <motion.div variants={textVariants}>
         <div class="flex-container">
           <div class="flex-items item01">
             <video autoStart autoPlay src={video} type="video/mp4" />

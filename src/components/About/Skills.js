@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StyledAbout } from "./Skills.styled";
 
-import { motion } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
+
+// intersection observer
+import { useInView } from "react-intersection-observer";
 
 const Skills = () => {
   const textVariants = {
-    visible: { opacity: 1, y: 0 },
+    visible: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.3 } },
     hidden: { opacity: 0, y: 40 },
   };
+
+  const controls = useAnimation();
+  const [refView, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+      console.log(inView, controls);
+    }
+  }, [controls, inView]);
 
   return (
     <StyledAbout>
@@ -68,7 +81,14 @@ const Skills = () => {
             </p>
           </div>
         </div>
-        <div class="card six">
+        <motion.div
+          ref={refView}
+          variants={textVariants}
+          animate={controls}
+          variants={textVariants}
+          initial="hidden"
+          class="card six"
+        >
           <div className="head">
             <h2>NextJs</h2>
           </div>
@@ -78,7 +98,7 @@ const Skills = () => {
               performant.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </StyledAbout>
   );
