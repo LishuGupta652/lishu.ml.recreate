@@ -8,17 +8,20 @@ import { useInView } from "react-intersection-observer";
 
 const Skills = () => {
   const textVariants = {
-    visible: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.3 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
     hidden: { opacity: 0, y: 40 },
   };
-
   const controls = useAnimation();
   const [refView, inView] = useInView();
 
   useEffect(() => {
     if (inView) {
-      controls.start("visible");
       console.log(inView, controls);
+      controls.start((i) => ({
+        opacity: 1,
+        y: 0,
+        transition: { delay: i * 0.1, duration: i * 0.3 },
+      }));
     }
   }, [controls, inView]);
 
@@ -26,7 +29,13 @@ const Skills = () => {
     <StyledAbout>
       <h1>SKILLS</h1>
       <div class="skills">
-        <div class="card one">
+        <motion.div
+          ref={refView}
+          animate={controls}
+          custom={3}
+          initial="hidden"
+          class="card one"
+        >
           <div className="head">
             <h2>React JS</h2>
           </div>
@@ -36,8 +45,16 @@ const Skills = () => {
               maintainance using Redux and ContextApi
             </p>
           </div>
-        </div>
-        <div class="card two">
+        </motion.div>
+        <motion.div
+          ref={refView}
+          variants={textVariants}
+          animate={controls}
+          variants={textVariants}
+          custom={1}
+          initial="hidden"
+          class="card two"
+        >
           <div className="head">
             <h2>Express, MongoDB & Firebase</h2>
           </div>
@@ -46,8 +63,16 @@ const Skills = () => {
               Made full stack applications using REST APIs, MongoDB & Firebase
             </p>
           </div>
-        </div>
-        <div class="card three">
+        </motion.div>
+        <motion.div
+          ref={refView}
+          variants={textVariants}
+          animate={controls}
+          variants={textVariants}
+          custom={2}
+          initial="hidden"
+          class="card three"
+        >
           <div className="head">
             <h2>Data Structure & algo</h2>
           </div>
@@ -57,8 +82,16 @@ const Skills = () => {
               language
             </p>
           </div>
-        </div>
-        <div class="card four">
+        </motion.div>
+        <motion.div
+          ref={refView}
+          variants={textVariants}
+          animate={controls}
+          variants={textVariants}
+          custom={2.4}
+          initial="hidden"
+          class="card four"
+        >
           <div className="head">
             <h2>Android (Flutter, ReactNative)</h2>
             <p>
@@ -69,8 +102,16 @@ const Skills = () => {
           <div className="body">
             <p></p>
           </div>
-        </div>
-        <div class="card five">
+        </motion.div>
+        <motion.div
+          ref={refView}
+          variants={textVariants}
+          animate={controls}
+          variants={textVariants}
+          custom={2.7}
+          initial="hidden"
+          class="card five"
+        >
           <div className="head">
             <h2>API Design</h2>
           </div>
@@ -80,12 +121,13 @@ const Skills = () => {
               to Blog post and User Auth.
             </p>
           </div>
-        </div>
+        </motion.div>
         <motion.div
           ref={refView}
           variants={textVariants}
           animate={controls}
           variants={textVariants}
+          custom={3}
           initial="hidden"
           class="card six"
         >

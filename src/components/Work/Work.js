@@ -8,17 +8,11 @@ import { useAnimation, motion } from "framer-motion";
 // intersection observer
 import { useInView } from "react-intersection-observer";
 
+// Projects
+import { projectArray } from "../../projectArray";
+
 // images
-import dwarf from "../../images/project/dwarf.jpg";
-import scsit from "../../images/project/scsit.jpg";
-import whatsapp from "../../images/project/whatsapp.jpg";
-import instagram from "../../images/project/instagram.jpg";
-import azael from "../../images/project/azaelindia.jpg";
-import hotel from "../../images/project/dwarf02.jpg";
-import payingguest from "../../images/project/payingguest.jpg";
-import scribble from "../../images/project/scribble.jpg";
-import auth from "../../images/project/authpassport.jpg";
-import detect from "../../images/project/gitmandetect.jpg";
+
 import trex from "../../images/project/dino.webm";
 import { Link } from "react-router-dom";
 
@@ -56,88 +50,6 @@ const Work = ({ showFeatured }) => {
     gsap.set(".animScroll", { transformOrigin: "right center", force3D: true });
   }, []);
 
-  const projectArray = [
-    {
-      title: "dwarf.co.in",
-      link: "http://www.dwarf.co.in/",
-      img: dwarf,
-      desc: "Complete Responsive Design made with ReactJS, Firebase",
-      route: "dwarf/#home",
-      featured: true,
-    },
-    {
-      title: "scs.dauniv.ac.in",
-      link: "http://www.scs.dauniv.ac.in/",
-      img: scsit,
-      desc: "Complete Responsive Design made with ReactJS, Firebase",
-      route: "scsit/#",
-      featured: true,
-    },
-    {
-      title: "whatsapp",
-      link: "https://whatsappcosmos.web.app/",
-      img: whatsapp,
-      desc: "Complete Responsive Design made with ReactJS, Firebase",
-      route: "whatsapp/#",
-      featured: true,
-    },
-    {
-      title: "instagramclone",
-      link: "ttps://instagramclonecosmos.web.app/",
-      img: instagram,
-      desc: "Complete Responsive Design made with ReactJS, Firebase",
-      route: "instagram/#",
-      featured: true,
-    },
-    {
-      title: "scs.dauniv.ac.in",
-      link: "http://www.scs.dauniv.ac.in/",
-      img: scsit,
-      desc: "Complete Responsive Design made with ReactJS, Firebase",
-      route: "scsit/#",
-      featured: false,
-    },
-    {
-      title: "Hotel booking App",
-      link: "https://hotelapp.lishu.ml/",
-      img: hotel,
-      desc: "Complete Responsive Design made with ReactJS, Firebase",
-      route: "hotel/#",
-      featured: false,
-    },
-    {
-      title: "Paying Guest App",
-      link: "http://www.payingguest.ml/",
-      img: payingguest,
-      desc: "Complete Responsive Design made with ReactJS, Firebase",
-      route: "payingguest/#",
-      featured: false,
-    },
-    {
-      title: "Scribbling Pens",
-      link: "https://sp.lishu.ml/",
-      img: scribble,
-      desc: "Complete Responsive Design made with ReactJS, Firebase",
-      route: "hotel/#",
-      featured: false,
-    },
-    {
-      title: "Facerecognition using ReactJS",
-      link: "https://sp.lishu.ml/",
-      img: detect,
-      desc: "Complete Responsive Design made with ReactJS, Firebase",
-      route: "detect/#",
-      featured: false,
-    },
-    {
-      title: "Azael India",
-      link: "#",
-      img: azael,
-      desc: "Complete Responsive Design made with ReactJS, Firebase",
-      route: "detect/#",
-      featured: false,
-    },
-  ];
   const controls = useAnimation();
   const [refView, inView] = useInView();
 
@@ -158,19 +70,14 @@ const Work = ({ showFeatured }) => {
   };
 
   return (
-    <motion.div
-      ref={refView}
-      variants={textVariants}
-      animate={controls}
-      initial="hidden"
-    >
+    <motion.div>
       <StyledWork>
         <h2 id="projects">projects & works</h2>
         {projectArray
           .filter((project) => (showFeatured ? project.featured : true))
-          .map(({ title, link, img, desc, route, featured }) => {
+          .map(({ title, link, img, desc, route, featured }, i) => {
             return (
-              <motion.div>
+              <motion.div custom={i} animate="visible" variants={variants}>
                 <SingleWork
                   title={title}
                   link={link}
@@ -227,7 +134,7 @@ const SingleWork = ({ img, title, link, desc, ref, route }) => {
 const SingleWorkVideo = ({ video, title, link, desc }) => {
   return (
     <FlexContainer>
-      <motion.div variants={textVariants}>
+      <motion.div>
         <div class="flex-container">
           <div class="flex-items item01">
             <video autoStart autoPlay src={video} type="video/mp4" />
