@@ -14,6 +14,7 @@ import { useContext } from "react";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/Footer";
 import Dwarf from "./pages/Dwarf";
+import About from "./pages/About";
 
 const lightTheme = {
   header: {
@@ -79,6 +80,7 @@ function App() {
                 <Route path="/projects" exact element={<Project />} />
                 <Route path="/blog" exact element={<Project />} />
                 <Route path="/project/dwarf" exact element={<Dwarf />} />
+                <Route path="/about" exact element={<About />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
