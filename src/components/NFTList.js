@@ -20,11 +20,7 @@ const NFTList = () => {
     };
     return getMyNfts();
   }, []);
-  return (
-    <NFTListStyled>
-      <h1>NFT Collection</h1>
-    </NFTListStyled>
-  );
+  return <NFTListStyled></NFTListStyled>;
 };
 
 const CollectionCard = ({ image, id, name, traits, weth }) => {

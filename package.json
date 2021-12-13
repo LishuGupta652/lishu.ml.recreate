@@ -1,6 +1,6 @@
 {
   "name": "lishu",
-  "proxy": "https://testnets.opensea.io/",
+  "proxy": "https://testnets-api.opensea.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
