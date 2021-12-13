@@ -6,6 +6,7 @@ import Header from "../components/Header/Header";
 import Work from "../components/Work/Work";
 
 import Contact from "../components/Contact/Contact";
+import NFTList from "../components/NFTList";
 
 const Home = () => {
   React.useEffect(() => {
@@ -15,6 +16,7 @@ const Home = () => {
   return (
     <div>
       <Header />
+      <NFTList />
       <Skills />
       <Work showFeatured={true} />
       <Contact />
