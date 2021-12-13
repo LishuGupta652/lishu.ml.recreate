@@ -6,6 +6,7 @@ const NFTListStyled = styled.div`
   width: 95%;
   margin: 0 auto;
 `;
+
 const NFTList = () => {
   const [punkListData, setPunkListData] = useState([]);
   const [selectedPunk, setSelectedPunk] = useState(0);
