@@ -98,7 +98,14 @@ const Header = () => {
             title="lishu gupta"
           >
             <Typed
-              strings={["Web", "Mongoose", "Express", "React", "NodeJS"]}
+              strings={[
+                "Web2.0",
+                "Web3.0",
+                "Mongoose",
+                "Express",
+                "React",
+                "NodeJS",
+              ]}
               backSpeed={50}
               typeSpeed={150}
               startDelay={500}

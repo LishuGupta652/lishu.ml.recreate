@@ -5,7 +5,6 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Work from "../components/Work/Work";
 
-import { Helmet } from "react-helmet";
 import Contact from "../components/Contact/Contact";
 
 const Home = () => {
