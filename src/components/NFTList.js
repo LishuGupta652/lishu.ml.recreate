@@ -22,7 +22,7 @@ const NFTList = () => {
   }, []);
   return (
     <NFTListStyled>
-      <h1>NFTList</h1>
+      <h1>NFT Collection</h1>
     </NFTListStyled>
   );
 };
