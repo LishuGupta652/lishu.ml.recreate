@@ -38,7 +38,6 @@ export const StyledAbout = styled.div`
       "four five six"
       ". . .";
     justify-items: center;
-    align-items: center;
   }
 
   @media (max-width: 720px) {

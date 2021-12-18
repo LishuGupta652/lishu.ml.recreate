@@ -33,7 +33,7 @@ const Skills = () => {
           variants={textVariants}
           animate={controls}
           variants={textVariants}
-          custom={2.4}
+          custom={1.1}
           initial="hidden"
           class="card one"
         >
@@ -52,27 +52,9 @@ const Skills = () => {
           variants={textVariants}
           animate={controls}
           variants={textVariants}
-          custom={1}
+          custom={1.3}
           initial="hidden"
           class="card two"
-        >
-          <div className="head">
-            <h2>Express, MongoDB & Firebase</h2>
-          </div>
-          <div className="body">
-            <p>
-              Made full stack applications using REST APIs, MongoDB & Firebase
-            </p>
-          </div>
-        </motion.div>
-        <motion.div
-          ref={refView}
-          variants={textVariants}
-          animate={controls}
-          variants={textVariants}
-          custom={2}
-          initial="hidden"
-          class="card three"
         >
           <div className="head">
             <h2>Data Structure & algo</h2>
@@ -89,7 +71,25 @@ const Skills = () => {
           variants={textVariants}
           animate={controls}
           variants={textVariants}
-          custom={2.4}
+          custom={1.5}
+          initial="hidden"
+          class="card three"
+        >
+          <div className="head">
+            <h2>Express, MongoDB & Firebase</h2>
+          </div>
+          <div className="body">
+            <p>
+              Made full stack applications using REST APIs, MongoDB & Firebase
+            </p>
+          </div>
+        </motion.div>
+        <motion.div
+          ref={refView}
+          variants={textVariants}
+          animate={controls}
+          variants={textVariants}
+          custom={1.8}
           initial="hidden"
           class="card four"
         >
@@ -109,7 +109,7 @@ const Skills = () => {
           variants={textVariants}
           animate={controls}
           variants={textVariants}
-          custom={2.7}
+          custom={2}
           initial="hidden"
           class="card five"
         >
@@ -128,7 +128,7 @@ const Skills = () => {
           variants={textVariants}
           animate={controls}
           variants={textVariants}
-          custom={3}
+          custom={2.3}
           initial="hidden"
           class="card six"
         >
