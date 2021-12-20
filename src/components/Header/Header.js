@@ -5,6 +5,9 @@ import {
   HeaderText,
   HeaderSideBar,
 } from "./Header.styled";
+// Global Stules
+import { Container } from "../../theme/global.styled";
+
 import { motion } from "framer-motion";
 // Images
 import patternImg from "../../images/pattern.svg";
@@ -26,7 +29,7 @@ const Header = () => {
   return (
     <div>
       <StyledHeader>
-        <StyledNavbar>
+        {/* <StyledNavbar>
           <motion.h2
             title="lishu.ml"
             initial="hidden"
@@ -38,7 +41,6 @@ const Header = () => {
               lishu gupta
             </Link>
           </motion.h2>
-          {/* opacity 0 in css */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -65,15 +67,6 @@ const Header = () => {
                 )}
               </div>
             </div>
-            {/* <motion.label class="switch">
-              <input
-                type="checkbox"
-                onClick={() => setTheme()}
-                {...(userPref === "light" ? "" : "checked")}
-              />
-              <span class="slider round"></span>
-            </motion.label>
-            <p>{theme === "dark" ? "Light" : "Dark"} mode</p> */}
           </motion.div>
           <motion.ul initial="hidden" animate="visible" variants={textVariants}>
             <li>
@@ -88,6 +81,19 @@ const Header = () => {
               <a href="https://auth.lishu.ml/login">login</a>
             </li>
           </motion.ul>
+        </StyledNavbar> */}
+        <StyledNavbar>
+          <Container>
+            <Flex>
+              <Logo>logo</Logo>
+              <Menu>
+                <button>
+                  <span></span>
+                  <span></span>
+                </button>
+              </Menu>
+            </Flex>
+          </Container>
         </StyledNavbar>
         <HeaderText>
           <motion.h1
