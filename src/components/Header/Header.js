@@ -4,11 +4,7 @@ import {
   StyledNavbar,
   HeaderText,
   HeaderSideBar,
-  Logo,
-  Menu,
 } from "./Header.styled";
-// Global Stules
-import { Container, Flex } from "../../theme/global.styled";
 
 import { motion } from "framer-motion";
 // Images
@@ -31,7 +27,7 @@ const Header = () => {
   return (
     <div>
       <StyledHeader>
-        {/* <StyledNavbar>
+        <StyledNavbar>
           <motion.h2
             title="lishu.ml"
             initial="hidden"
@@ -83,21 +79,8 @@ const Header = () => {
               <a href="https://auth.lishu.ml/login">login</a>
             </li>
           </motion.ul>
-        </StyledNavbar> */}
-        <StyledNavbar>
-          <Container fluid>
-            <Flex>
-              <Logo>logo</Logo>
-              <Menu>
-                <button>
-                  <span></span>
-                  <span></span>
-                </button>
-              </Menu>
-            </Flex>
-            hello
-          </Container>
         </StyledNavbar>
+
         <HeaderText>
           <motion.h1
             initial="hidden"
