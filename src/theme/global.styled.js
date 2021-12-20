@@ -20,7 +20,13 @@ export const Container = styled.div`
     max-width: 1244px;
   }
 
-  ${(props) => props.fluid && css``}
+  ${(props) =>
+    props.fluid &&
+    css`
+      padding: 0;
+      margin: 0;
+      max-width: 100%;
+    `}
 `;
 
 export const lightTheme = {
