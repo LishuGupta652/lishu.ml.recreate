@@ -1,7 +1,46 @@
 import styled, { createGlobalStyle } from "styled-components";
 
+export const lightTheme = {
+  header: {
+    nav: {
+      background: "#fafafa",
+      color: "#121212",
+    },
+  },
+  colors: {
+    background: "#fafafa",
+    color: "#212121",
+    green: "#2ecc71",
+    greenTrans: "rgba(46, 204, 112, 0.1)",
+    blue: "#30336b",
+    footer: "#30336b",
+    white: "#fafafa",
+    lightBlack: "#838383",
+  },
+  mobile: "786px",
+};
+
+export const darkTheme = {
+  header: {
+    nav: {
+      color: "#fafafa",
+      background: "#212121",
+    },
+  },
+  colors: {
+    color: "#fafafa",
+    background: "#212121",
+    green: "#2ecc71",
+    greenTrans: "rgba(46, 204, 112, 0.4)",
+    blue: "#fafafa",
+    footer: "#30336b",
+    white: "#fafafa",
+    lightBlack: "#838383",
+  },
+  mobile: "786px",
+};
+
 export const GlobalStyles = createGlobalStyle`
-@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Luxurious+Script&family=Montserrat:wght@100;300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
 
 :root {
   --background-color: #fafafa;
@@ -11,8 +50,8 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 ::selection {
-  background: var(--green);
-  color: #121212;
+  background: black;
+  color: white;
 }
 /* width */
 ::-webkit-scrollbar {
