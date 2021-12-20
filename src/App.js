@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/Footer";
 import Dwarf from "./pages/Dwarf";
 import About from "./pages/About";
+import { GlobalStyles } from "./theme/global.styled";
 
 const lightTheme = {
   header: {
@@ -72,6 +73,7 @@ function App() {
           className="animated-overlay"
         />
         <StyledApp>
+          <GlobalStyles />
           <div className="app">
             <BrowserRouter>
               <Routes>
