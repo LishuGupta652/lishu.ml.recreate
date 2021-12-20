@@ -69,7 +69,16 @@ export const Container = styled.div`
     `}
 `;
 
-export const Flex = styled.div``;
+export const Flex = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  ${(props) => props.spaceBetween && `justify-content: space-between;`}
+  ${(props) => props.flexEnd && `justify-content: flex-end;`}
+  ${(props) => props.alignTop && `align-items: top;`}
+  ${(props) => props.noHeight && `height: 0 ;`}
+`;
 
 export const GlobalStyles = createGlobalStyle`
 
