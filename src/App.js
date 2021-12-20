@@ -15,47 +15,7 @@ import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer/Footer";
 import Dwarf from "./pages/Dwarf";
 import About from "./pages/About";
-import { GlobalStyles } from "./theme/global.styled";
-
-const lightTheme = {
-  header: {
-    nav: {
-      background: "#fafafa",
-      color: "#121212",
-    },
-  },
-  colors: {
-    background: "#fafafa",
-    color: "#212121",
-    green: "#2ecc71",
-    greenTrans: "rgba(46, 204, 112, 0.1)",
-    blue: "#30336b",
-    footer: "#30336b",
-    white: "#fafafa",
-    lightBlack: "#838383",
-  },
-  mobile: "786px",
-};
-
-const darkTheme = {
-  header: {
-    nav: {
-      color: "#fafafa",
-      background: "#212121",
-    },
-  },
-  colors: {
-    color: "#fafafa",
-    background: "#212121",
-    green: "#2ecc71",
-    greenTrans: "rgba(46, 204, 112, 0.4)",
-    blue: "#fafafa",
-    footer: "#30336b",
-    white: "#fafafa",
-    lightBlack: "#838383",
-  },
-  mobile: "786px",
-};
+import { GlobalStyles, lightTheme, darkTheme } from "./theme/global.styled";
 
 const StyledApp = styled.div`
   background-color: ${(props) => props.theme.colors.background};

@@ -7,6 +7,9 @@ export const StyledHeader = styled.div`
   grid-template-rows: 80px 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
+
+  border-radius: 20px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ccab7f",endColorstr="#dde284",GradientType=1);
   grid-template-areas:
     "navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar"
     ". . . . . . . . . . . ."
