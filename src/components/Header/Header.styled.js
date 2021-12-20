@@ -83,80 +83,53 @@ export const StyledHeader = styled.div`
 `;
 
 export const StyledNavbar = styled.nav`
-  width: 100%;
-  right: 0;
-  left: 0;
-  z-index: 99;
   grid-area: navbar;
-`;
-
-export const Logo = styled.div`
+  background-color: ${(props) => props.theme.header.nav.background};
+  color: ${(props) => props.theme.header.nav.color};
   display: flex;
-  a {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: ${(props) => props.theme.header.nav.color};
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 0 20px;
+
+  h2 {
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    z-index: 10;
+    font-size: clamp(1rem, 1.2vw, 2rem);
   }
-  span {
-    height: 1rem;
-    width: 1rem;
-    background-color: ${(props) => props.theme.red};
-    margin: 0 4px;
-    border-radius: 100%;
-    display: inline-block;
-    position: relative;
-    bottom: 2px;
+  h2:hover {
+    color: ${(props) => props.theme.colors.green};
+  }
+  .switch-bar {
+    color: ${(props) => props.theme.colors.color};
+    font-size: 9px;
+  }
+
+  .switch-icon {
+    cursor: pointer;
+  }
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    opacity: 0;
+  }
+  ul li {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: clamp(0.8rem, 1vw, 2rem);
+    transition: 0.2s ease-in-out;
+  }
+  ul li:hover {
+    color: ${(props) => props.theme.colors.green};
   }
 `;
-export const Menu = styled.div``;
-// export const StyledNavbar = styled.nav`
-//   grid-area: navbar;
-//   background-color: ${(props) => props.theme.header.nav.background};
-//   color: ${(props) => props.theme.header.nav.color};
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   text-transform: uppercase;
-//   padding: 0 20px;
-
-//   h2 {
-//     transition: 0.2s ease-in-out;
-//     cursor: pointer;
-//     z-index: 10;
-//     font-size: clamp(1rem, 1.2vw, 2rem);
-//   }
-//   h2:hover {
-//     color: ${(props) => props.theme.colors.green};
-//   }
-//   .switch-bar {
-//     color: ${(props) => props.theme.colors.color};
-//     font-size: 9px;
-//   }
-
-//   .switch-icon {
-//     cursor: pointer;
-//   }
-//   .icon {
-//     width: 28px;
-//     height: 28px;
-//   }
-
-//   ul {
-//     display: flex;
-//     align-items: center;
-//     transition: 0.2s ease-in-out;
-//     opacity: 0;
-//   }
-//   ul li {
-//     margin-right: 20px;
-//     font-weight: bold;
-//     font-size: clamp(0.8rem, 1vw, 2rem);
-//     transition: 0.2s ease-in-out;
-//   }
-//   ul li:hover {
-//     color: ${(props) => props.theme.colors.green};
-//   }
-// `;
 
 export const HeaderText = styled.div`
   grid-area: headerText;
