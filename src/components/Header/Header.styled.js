@@ -131,6 +131,9 @@ export const StyledNavbar = styled.nav`
   }
 `;
 
+export const Logo = styled.div``;
+export const Menu = styled.div``;
+
 export const HeaderText = styled.div`
   grid-area: headerText;
   font-size: clamp(1rem, 2.5vw, 2rem);

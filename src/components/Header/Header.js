@@ -4,9 +4,11 @@ import {
   StyledNavbar,
   HeaderText,
   HeaderSideBar,
+  Logo,
+  Menu,
 } from "./Header.styled";
 // Global Stules
-import { Container } from "../../theme/global.styled";
+import { Container, Flex } from "../../theme/global.styled";
 
 import { motion } from "framer-motion";
 // Images
@@ -83,7 +85,7 @@ const Header = () => {
           </motion.ul>
         </StyledNavbar> */}
         <StyledNavbar>
-          <Container>
+          <Container fluid>
             <Flex>
               <Logo>logo</Logo>
               <Menu>
@@ -93,6 +95,7 @@ const Header = () => {
                 </button>
               </Menu>
             </Flex>
+            hello
           </Container>
         </StyledNavbar>
         <HeaderText>
