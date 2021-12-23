@@ -12,6 +12,26 @@ const Skills = () => {
     hidden: { opacity: 0, y: 40 },
   };
   const controls = useAnimation();
+
+  const parent = {
+    initial: { y: 800 },
+    animate: {
+      y: 0,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+
+  const child = {
+    initial: { y: 800 },
+    animate: {
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: [0.6, 0.05, -0.01, 0.9],
+      },
+    },
+  };
+
   const [refView, inView] = useInView();
 
   useEffect(() => {
