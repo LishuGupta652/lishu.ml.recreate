@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const StyledHeader = styled.div`
+import { motion } from "framer-motion";
+export const StyledHeader = styled(motion.div)`
   display: grid;
   position: relative;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;

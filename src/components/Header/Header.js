@@ -22,19 +22,17 @@ const Header = () => {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 30 },
   };
+  const navVariants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -100 },
+  };
   const userPref = sessionStorage.getItem("theme");
 
   return (
     <div>
       <StyledHeader>
-        <StyledNavbar>
-          <motion.h2
-            title="lishu.ml"
-            initial="hidden"
-            animate="visible"
-            variants={textVariants}
-            onClick={() => setTheme()}
-          >
+        <StyledNavbar initial="hidden" animate="visible" variants={navVariants}>
+          <motion.h2 title="lishu.ml" onClick={() => setTheme()}>
             <Link to="/" id="home">
               lishu gupta
             </Link>
