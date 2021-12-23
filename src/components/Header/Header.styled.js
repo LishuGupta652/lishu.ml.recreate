@@ -82,7 +82,7 @@ export const StyledHeader = styled(motion.div)`
   }
 `;
 
-export const StyledNavbar = styled.nav`
+export const StyledNavbar = styled(motion.nav)`
   grid-area: navbar;
   background-color: ${(props) => props.theme.header.nav.background};
   color: ${(props) => props.theme.header.nav.color};

@@ -22,28 +22,42 @@ const Header = () => {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 30 },
   };
-  const navVariants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: -100 },
+  const parent = {
+    initial: { y: 30, opacity: 0 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.2,
+        delay: 0.5,
+        ease: [0.6, 0.05, -0.01, 0.9],
+      },
+    },
   };
+
+  const child = {
+    initial: { y: 30 },
+    animate: {
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: [0.6, 0.05, -0.01, 0.9],
+      },
+    },
+  };
+
   const userPref = sessionStorage.getItem("theme");
 
   return (
     <div>
       <StyledHeader>
-        <StyledNavbar initial="hidden" animate="visible" variants={navVariants}>
+        <StyledNavbar variants={parent} initial="initial" animate="animate">
           <motion.h2 title="lishu.ml" onClick={() => setTheme()}>
             <Link to="/" id="home">
               lishu gupta
             </Link>
           </motion.h2>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={textVariants}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            className="switch-bar"
-          >
+          <motion.div className="switch-bar">
             <div>
               <div className="switch-icon" onClick={() => setTheme()}>
                 {userPref === "light" ? (
@@ -64,7 +78,7 @@ const Header = () => {
               </div>
             </div>
           </motion.div>
-          <motion.ul initial="hidden" animate="visible" variants={textVariants}>
+          <motion.ul>
             <li>
               <Link to="/blog">blog</Link>
             </li>
