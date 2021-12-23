@@ -78,7 +78,16 @@ const Header = () => {
               </div>
             </div>
           </motion.div>
-          <motion.ul>
+          <motion.ul
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+            transition={{
+              delay: 0.2,
+              duration: 0.3,
+              ease: [0.6, 0.05, -0.01, 0.9],
+            }}
+          >
             <li>
               <Link to="/blog">blog</Link>
             </li>
