@@ -14,7 +14,7 @@ import patternImg2 from "../../images/pattern2.svg";
 import Typed from "react-typed";
 
 import { Theme } from "../../contextapi/ThemeContext";
-import { Link } from "react-router-dom";
+import { Link as a } from "react-router-dom";
 
 const Header = () => {
   const [theme, setTheme] = useContext(Theme);
@@ -53,9 +53,9 @@ const Header = () => {
       <StyledHeader>
         <StyledNavbar variants={parent} initial="initial" animate="animate">
           <motion.h2 title="lishu.ml" onClick={() => setTheme()}>
-            <Link to="/" id="home">
+            <a to="/" id="home">
               lishu gupta
-            </Link>
+            </a>
           </motion.h2>
           <motion.div className="switch-bar">
             <div>
@@ -89,12 +89,12 @@ const Header = () => {
             }}
           >
             <li>
-              <Link to="/blog">blog</Link>
+              <a href="https://blog.lishu.ml">blog</a>
             </li>
             <li>
-              <Link href="/projects" to="/projects">
+              <a href="/projects" to="/projects">
                 projects
-              </Link>
+              </a>
             </li>
             <li>
               <a href="https://auth.lishu.ml/login">login</a>

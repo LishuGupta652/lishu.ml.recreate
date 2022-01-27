@@ -108,6 +108,8 @@ export const StyledNavbar = styled(motion.nav)`
 
   .switch-icon {
     cursor: pointer;
+    
+
   }
   .icon {
     width: 28px;
