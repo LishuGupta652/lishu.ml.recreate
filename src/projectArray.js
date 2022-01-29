@@ -35,7 +35,7 @@ export const projectArray = [
   },
   {
     title: "instagramclone",
-    link: "ttps://instagramclonecosmos.web.app/",
+    link: "https://instagramclonecosmos.web.app/",
     img: instagram,
     desc: "Instagram Clone made with ReactJs and Firebase as a backend.",
     route: "instagram/#",
