@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Header from "../components/Header/Header";
 import Work from "../components/Work/Work";
-
 import { Helmet } from "react-helmet";
-
+import { useParams } from "react-router-dom";
+import { projectArray } from "../projectArray";
 // Assets
 import dwarfGif from "../images/project/dwarf_main.gif";
 const WorkContainer = styled.div`
@@ -19,6 +19,9 @@ const WorkContainer = styled.div`
     letter-spacing: 5px;
     padding: 30px 0;
   }
+  h2 {
+    text-align: center;
+  }
   .videoMainWrap {
     margin: 0 auto;
     width: 100%;
@@ -31,7 +34,9 @@ const WorkContainer = styled.div`
   }
 `;
 
-const Scsit = () => {
+const ProjectQueryPage = () => {
+  const { project } = useParams();
+  const projectData = projectArray.find((item) => item.route.includes(project));
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -39,16 +44,17 @@ const Scsit = () => {
   return (
     <div>
       <Helmet>
-        <title>Scsit | Lishu gupta</title>
+        <title>{projectData.title} | Lishu gupta</title>
         <meta name="title" content="Dwarf | Lishu Gupta" />
         <meta name="author" content="Lishu Gupta" />
       </Helmet>
       <Header />
       <WorkContainer>
-        <a href="http://www.scs.dauniv.ac.in/" target="_blank">
-          <h1>Dwarf.co.in</h1>
+        <a href={projectData.link} target="_blank">
+          <h1>{projectData.title}</h1>
+          <h2>{projectData.desc}</h2>
           <div className="videoMainWrap">
-            <img className="videoMain" src={dwarfGif} alt="" />
+            <img className="videoMain" src={projectData.src} alt="" />
           </div>
         </a>
       </WorkContainer>
@@ -56,4 +62,4 @@ const Scsit = () => {
   );
 };
 
-export default Scsit;
+export default ProjectQueryPage;

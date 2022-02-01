@@ -16,6 +16,7 @@ import Footer from "./components/Footer/Footer";
 import Dwarf from "./pages/Dwarf";
 import About from "./pages/About";
 import { GlobalStyles, lightTheme, darkTheme } from "./theme/global.styled";
+import ProjectQueryPage from "./pages/ProjectQueryPage";
 
 const StyledApp = styled.div`
   background-color: ${(props) => props.theme.colors.background};
@@ -41,7 +42,11 @@ function App() {
                 <Route path="/home" exact element={<Home />} />
                 <Route path="/projects" exact element={<Project />} />
                 <Route path="/blog" exact element={<Project />} />
-                <Route path="/project/dwarf" exact element={<Dwarf />} />
+                <Route
+                  path="/project/:project"
+                  exact
+                  element={<ProjectQueryPage />}
+                />
                 <Route path="/about" exact element={<About />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

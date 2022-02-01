@@ -8,6 +8,9 @@ import payingguest from "./images/project/payingguest.jpg";
 import scribble from "./images/project/scribble.jpg";
 import auth from "./images/project/authpassport.jpg";
 import detect from "./images/project/gitmandetect.jpg";
+
+// Videos
+import dwarfGif from "./images/project/dwarf_main.gif";
 export const projectArray = [
   {
     title: "dwarf.co.in",
@@ -16,6 +19,7 @@ export const projectArray = [
     desc: "Complete Responsive Design made with ReactJS, Firebase",
     route: "dwarf/#home",
     featured: true,
+    src: dwarfGif,
   },
   {
     title: "scs.dauniv.ac.in",
@@ -24,6 +28,7 @@ export const projectArray = [
     desc: "Website made for School of computer science and IT with php and is complete responsive",
     route: "scsit/#",
     featured: true,
+    src: scsit,
   },
   {
     title: "whatsapp",
@@ -32,6 +37,7 @@ export const projectArray = [
     desc: "Whatsapp Clone made with ReactJs and firebase as a backend.",
     route: "whatsapp/#",
     featured: true,
+    src: whatsapp,
   },
   {
     title: "instagramclone",
@@ -40,6 +46,7 @@ export const projectArray = [
     desc: "Instagram Clone made with ReactJs and Firebase as a backend.",
     route: "instagram/#",
     featured: true,
+    src: instagram,
   },
   {
     title: "Hotel booking App",
@@ -48,6 +55,7 @@ export const projectArray = [
     desc: "Hotel app with ReactJs and Firebase as a backend. With login logout and Cart functionality.",
     route: "hotel/#",
     featured: false,
+    src: hotel,
   },
   {
     title: "Paying Guest App",
@@ -56,6 +64,7 @@ export const projectArray = [
     desc: "Paying guest with ReactJs and Firebase as a backend. With login logout and Cart functionality.",
     route: "payingguest/#",
     featured: false,
+    src: payingguest,
   },
   {
     title: "Scribbling Pens",
@@ -64,6 +73,7 @@ export const projectArray = [
     desc: "Used the Content full to make a CRM system and make a website to fetch and deliver the post on the instagram pages.",
     route: "hotel/#",
     featured: false,
+    src: scribble,
   },
   {
     title: "Facerecognition using ReactJS",
@@ -72,6 +82,7 @@ export const projectArray = [
     desc: "FaceRecognition project which can detect the person in the image and put canvas on the top of it using Machine Learning model and FaceJS",
     route: "detect/#",
     featured: false,
+    src: detect,
   },
   {
     title: "Azael India",
@@ -80,5 +91,6 @@ export const projectArray = [
     desc: "Made a Website for Azael India. Company based in New Delhi",
     route: "detect/#",
     featured: false,
+    src: dwarfGif,
   },
 ];
