@@ -5,8 +5,7 @@ import Work from "../components/Work/Work";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import { projectArray } from "../projectArray";
-// Assets
-import dwarfGif from "../images/project/dwarf_main.gif";
+
 const WorkContainer = styled.div`
   width: 95%;
   margin: 0 auto;

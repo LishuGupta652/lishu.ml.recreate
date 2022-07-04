@@ -6,7 +6,6 @@ import azael from "./images/project/azaelindia.jpg";
 import hotel from "./images/project/dwarf02.jpg";
 import payingguest from "./images/project/payingguest.jpg";
 import scribble from "./images/project/scribble.jpg";
-import auth from "./images/project/authpassport.jpg";
 import detect from "./images/project/gitmandetect.jpg";
 
 // Videos
@@ -14,7 +13,7 @@ import dwarfGif from "./images/project/dwarf_main.gif";
 export const projectArray = [
   {
     title: "dwarf.co.in",
-    link: "http://www.dwarf.co.in/",
+    link: "https://dwarf.lishugupta.in/",
     img: dwarf,
     desc: "Complete Responsive Design made with ReactJS, Firebase",
     route: "dwarf/#home",
@@ -50,7 +49,7 @@ export const projectArray = [
   },
   {
     title: "Hotel booking App",
-    link: "https://hotelapp.lishu.ml/",
+    link: "https://hotelapp.lishugupta.in/",
     img: hotel,
     desc: "Hotel app with ReactJs and Firebase as a backend. With login logout and Cart functionality.",
     route: "hotel/#",
@@ -59,7 +58,7 @@ export const projectArray = [
   },
   {
     title: "Paying Guest App",
-    link: "http://www.payingguest.ml/",
+    link: "http://payingguestbuild.lishugupta.in/",
     img: payingguest,
     desc: "Paying guest with ReactJs and Firebase as a backend. With login logout and Cart functionality.",
     route: "payingguest/#",
@@ -68,7 +67,7 @@ export const projectArray = [
   },
   {
     title: "Scribbling Pens",
-    link: "https://sp.lishu.ml/",
+    link: "https://scribblingpens.lishugupta.in/",
     img: scribble,
     desc: "Used the Content full to make a CRM system and make a website to fetch and deliver the post on the instagram pages.",
     route: "scribble/#",
@@ -77,7 +76,7 @@ export const projectArray = [
   },
   {
     title: "Facerecognition using ReactJS",
-    link: "https://sp.lishu.ml/",
+    link: "https://face.lishugupta.in/",
     img: detect,
     desc: "FaceRecognition project which can detect the person in the image and put canvas on the top of it using Machine Learning model and FaceJS",
     route: "detect/#",
