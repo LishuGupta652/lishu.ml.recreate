@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <NFTList />
+      {/* <NFTList /> */}
       <Skills />
       <Work showFeatured={true} />
       <Contact />

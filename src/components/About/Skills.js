@@ -50,7 +50,6 @@ const Skills = () => {
       <div class="skills">
         <motion.div
           ref={refView}
-          variants={textVariants}
           animate={controls}
           variants={textVariants}
           custom={1.1}
@@ -69,7 +68,6 @@ const Skills = () => {
         </motion.div>
         <motion.div
           ref={refView}
-          variants={textVariants}
           animate={controls}
           variants={textVariants}
           custom={1.3}
@@ -88,7 +86,6 @@ const Skills = () => {
         </motion.div>
         <motion.div
           ref={refView}
-          variants={textVariants}
           animate={controls}
           variants={textVariants}
           custom={1.5}
@@ -106,7 +103,6 @@ const Skills = () => {
         </motion.div>
         <motion.div
           ref={refView}
-          variants={textVariants}
           animate={controls}
           variants={textVariants}
           custom={1.8}
@@ -126,7 +122,6 @@ const Skills = () => {
         </motion.div>
         <motion.div
           ref={refView}
-          variants={textVariants}
           animate={controls}
           variants={textVariants}
           custom={2}
@@ -145,7 +140,6 @@ const Skills = () => {
         </motion.div>
         <motion.div
           ref={refView}
-          variants={textVariants}
           animate={controls}
           variants={textVariants}
           custom={2.3}

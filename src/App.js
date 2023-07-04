@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <ThemeProvider theme={theme === "dark" ? lightTheme : darkTheme}>
         <motion.div
           animate={{ x: "-150%" }}
           transition={{ delay: 0.1, duration: 0.5 }}
